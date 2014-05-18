@@ -34,7 +34,6 @@ define([
     app_router.on('route:newUser', function(){
    
         var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk'});
-        alert(user.get("first_name"));
         user.save({
           success: function(model, resp){
             alert("wel done!");
@@ -49,7 +48,6 @@ define([
     app_router.on('route:loginUser', function(){
    
         var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk', type: 'login'});
-        alert(user.get("first_name"));
         user.save({
           success: function(model, resp){
             alert("wel done!");
