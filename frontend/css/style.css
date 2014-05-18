@@ -310,9 +310,9 @@ h1{
 }
 
 #navigation a:hover {
-  color: #333;
+  color: #D1E751;
   text-decoration: none;
-  border: 3px solid #333;
+  border: 3px solid #D1E751;
 }
 .circle {
     float:left;
