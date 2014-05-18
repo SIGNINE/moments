@@ -3,7 +3,7 @@ define([
   'underscore',
   'backbone',
   'text!templates/home/homeTemplate.html',
-  'models/user/UserModel',
+  'models/user/UserModel'
 ], function($, _, Backbone, UserModel, homeTemplate){
 
   var HomeView = Backbone.View.extend({
@@ -13,14 +13,24 @@ define([
       'click input#btn_register': 'newUser'
     },
 
-    newUser: function(){
+    newUser:function(e){
+      e.preventDefault();
       alert("hi");
+      var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk', type: 'login'});
+        user.save({
+          success: function(model, resp){
+            alert("wel done!");
+          },
+          error: function(){
+            alert("aw we failed :(");
+          }
+        });
     },
 
     render: function(){
       
-      $el.hide();
-      $el.hide().html(homeTemplate).fadeIn();
+      this.$el.hide();
+      this.$el.hide().html(homeTemplate).fadeIn();
  
     }
 
