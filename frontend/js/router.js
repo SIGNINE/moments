@@ -6,7 +6,7 @@ define([
   'models/user/UserModel',
   'views/home/HomeView',
   'views/photos/PhotosView',
-  'views/photos/CirclesView',
+  'views/circles/CirclesView',
 ], function($, _, Backbone, UserModel, HomeView, PhotosView, CirclesView) {
   
   var AppRouter = Backbone.Router.extend({
