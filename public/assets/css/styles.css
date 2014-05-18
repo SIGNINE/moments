@@ -1,4 +1,2 @@
 @import url('style.css');
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css");
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css");
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js");
+@import url('bootstrap.css');
