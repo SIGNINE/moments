@@ -481,6 +481,7 @@ width: 100%;
 .splash_logo h1{
   font-family:Georgia,serif;
   font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;
+  font-size: 30px;
 }
 
 .splash_logo h3{
