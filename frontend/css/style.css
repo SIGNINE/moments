@@ -531,7 +531,8 @@ text-align: left;
   margin-right: 2%;
   height: 30px !important;
   border-radius: 0px !important;
-  border-top: 0px;
-  border-bottom: 0px;
-  border-right: 0px;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+  border-right: 0px !important;
+  border-left: 5px #4DBCE9 solid !important;
 }
