@@ -516,3 +516,7 @@ text-align: left;
   padding-right: 15px;
   margin-right: 10px;
 }
+
+.logotext button:hover {
+  background-color: #D1E751;
+}
