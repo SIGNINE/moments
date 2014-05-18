@@ -535,4 +535,10 @@ text-align: left;
   border-bottom: 0px !important;
   border-right: 0px !important;
   border-top: 5px #4DBCE9 solid !important;
+  font-family: Gill Sans, Verdana;
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
