@@ -46,6 +46,7 @@ h6{
   font-weight: normal !important;
   text-align: left;
 }
+
 #page {
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
@@ -498,7 +499,7 @@ width: 100%;
 text-align: left;
 }
 .splash_logo h1{
-  font-family: times, Times New Roman, times-roman, georgia, serif;
+  font-family: "Enriqueta", serif;
   color: #000;
   margin: 0;
   padding: 0px 0px 6px 0px;
@@ -506,6 +507,14 @@ text-align: left;
   line-height: 44px;
   letter-spacing: -2px;
   font-weight: bold;
+}
+
+.splash_logo h2{
+  font-family: Georgia, serif;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  font-style: italic;
 }
 
 .splash_logo h3{
