@@ -64,7 +64,7 @@ h6{
     position:relative;
     top: 0px;
     left: 0px;
-    padding: 0px;
+    padding: 10px;
     margin: 0px;
     width: 500px;
     float: left;
@@ -359,10 +359,10 @@ h6{
     background-color:#1E1E1E;
     overflow:hidden;
     border: 3px solid #e2e2e2;
-  -webkit-transition: scale 0.7s ease;
-  -moz-transition: scale 0.7s ease;
-  -o-transition: scale 0.7s ease;
-  transition: scale 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
   
 }
 
