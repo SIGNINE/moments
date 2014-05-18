@@ -515,8 +515,7 @@ text-align: left;
   line-height: 14px;
   letter-spacing: 2px;
   font-style: italic;
-  font-weight: normal;
-  text-transform: uppercase;
+  color: #aaaaaa;
 }
 
 .splash_logo h3{
