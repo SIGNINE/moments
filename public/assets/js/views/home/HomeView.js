@@ -12,10 +12,6 @@ define([
       'click input#btn_register': 'register'
     },
 
-    initialize: function(){
-      _.bindAll(this, 'submit');
-    },
-
     register:function(e){
       alert("hi");
     },
