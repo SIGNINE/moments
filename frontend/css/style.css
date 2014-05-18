@@ -479,6 +479,15 @@ float:left;
 width: 100%;
 }
 
+.splash_logo h3{
+  font-family: Gill Sans, Verdana;
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
 #splash{
   margin-top: 10%;
   text-align: left;
