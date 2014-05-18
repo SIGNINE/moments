@@ -10,7 +10,10 @@ define([
   		},
 
 		  url : function() {
+        if(this.get('type'))
 	        return '../user/' + this.get('type');
+        else
+          return '../user/';
 	    },
 	    
 	    parse : function(res) { 
