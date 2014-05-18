@@ -511,10 +511,12 @@ text-align: left;
 
 .splash_logo h2{
   font-family: Georgia, serif;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 14px;
   letter-spacing: 2px;
   font-style: italic;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 .splash_logo h3{
