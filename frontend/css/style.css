@@ -525,16 +525,6 @@ text-align: left;
   background-color: #D1E751;
 }
 
-* {
-
-  font-family: Gill Sans, Verdana;
-  font-size: 8px;
-  line-height: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-
-}
-
 .logotext input {
   width: 25%;
   float: left; 
@@ -545,5 +535,10 @@ text-align: left;
   border-bottom: 0px !important;
   border-right: 0px !important;
   border-top: 5px #4DBCE9 solid !important;
-
+  font-family: Gill Sans, Verdana;
+  font-size: 9px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
