@@ -15,7 +15,7 @@ define([
       'photos': 'showPhotos',
       'register': 'newUser',
       'login': 'loginUser',
-      'circles': 'showCircles'
+      'circles': 'showCircles',
       // Default
       '*actions': 'defaultAction'
     }
