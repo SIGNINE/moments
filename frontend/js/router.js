@@ -36,7 +36,6 @@ define([
     app_router.on('route:showCircles', function(){
    
         // Call render on the module we loaded in via the dependency array
-        alert("calling circles");
         var circlesView = new CirclesView();
         circlesView.render();
 
