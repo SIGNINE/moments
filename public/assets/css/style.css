@@ -338,11 +338,10 @@ h6{
     position: relative;
     width: 30%;
     padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
-    margin:1%;
+    margin:1.66%;
     background-color:#4DBCE9;
     overflow:hidden;
     border-radius: 50%;
-    border: 3px solid #e2e2e2;
   -webkit-transition: all 0.7s ease;
   -moz-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
@@ -369,7 +368,6 @@ h6{
 .circle:hover {
   background-image: none !important;
   cursor: pointer;
-  border: none;
   -webkit-transform: scale(1.1,1.1);;
   -moz-transform: scale(1.1,1.1);;
   -ms-transform: scale(1.1,1.1);;
