@@ -368,11 +368,20 @@ h6{
 .circle:hover {
   background-image: none !important;
   cursor: pointer;
-  -webkit-transform: scale(1.1,1.1);;
-  -moz-transform: scale(1.1,1.1);;
-  -ms-transform: scale(1.1,1.1);;
-  -o-transform: scale(1.1,1.1);;
-  transform: scale(1.1,1.1);;
+  -webkit-transform: scale(1.1,1.1);
+  -moz-transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+  -o-transform: scale(1.1,1.1);
+  transform: scale(1.1,1.1);
+}
+
+.square:hover {
+  cursor: pointer;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  transform: rotate(10deg);
 }
 
 
