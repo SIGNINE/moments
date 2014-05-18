@@ -13,7 +13,10 @@ define([
     },
 
     register:function(e){
-      alert(this.model.get("first_name"));
+      $email = $("button#btn_register").parent().find("input:text").val();
+      $pw = $("button#btn_register").parent().find("input:password").val();
+      this.model.set({"email":$email,"password":$pw});
+      alert(this.model.get("email"));
     },
 
     render: function(){
