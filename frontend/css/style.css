@@ -552,7 +552,7 @@ text-align: left;
   letter-spacing: 2px;
 }
 
-.logo img {
+#logo img {
+  display: none;
   border-bottom: 5px #4DBCE9 solid !important;
-
 }
