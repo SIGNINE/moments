@@ -463,3 +463,14 @@ p{
     background:#ECECEC;
     border:1px solid #fff;
 }
+
+.logotext{
+  display: inline-block;
+}
+.splash_logo{
+float:left;
+    width: 100%;
+}
+.splash_text{
+float:left;
+}
