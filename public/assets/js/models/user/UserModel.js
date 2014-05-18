@@ -6,7 +6,6 @@ define([
   var UserModel = Backbone.Model.extend({
 
       initialize: function( options ) {
-  			this.query = options.query; 
   		},
 
 		  url : function() {
