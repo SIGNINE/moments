@@ -506,3 +506,7 @@ width: 100%;
 #contents{
   display: none;
 }
+
+.logotext button {
+  background-color: black;
+}
