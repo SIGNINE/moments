@@ -19,8 +19,8 @@ define([
 
     render: function(){
       
-      this.$el.hide();
-      this.$el.hide().html(homeTemplate).fadeIn();
+      $el.hide();
+      $el.hide().html(homeTemplate).fadeIn();
  
     }
 
