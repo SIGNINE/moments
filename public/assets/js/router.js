@@ -3,6 +3,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'fancybox',
   'models/user/UserModel',
   'views/home/HomeView',
   'views/photos/PhotosView',
