@@ -320,7 +320,7 @@ h1{
     width: 30%;
     padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
     margin:1.66%;
-    background-color:#1E1E1E;
+    background-color:#4DBCE9;
     overflow:hidden;
     border-radius: 50%;
   -webkit-transition: all 0.7s ease;
@@ -532,10 +532,6 @@ text-align: left;
   line-height: 14px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 
 }
 
@@ -558,6 +554,10 @@ text-align: left;
 
 .logo img {
   border-bottom: 5px #4DBCE9 solid !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .logo img:hover {
