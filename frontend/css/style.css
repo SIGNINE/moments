@@ -316,7 +316,7 @@ h1{
 }
 
 .upload:hover {
-  background-color: #26ADE4;
+  background-color: #26ADE4 !important;
   border-color: #26ADE4 !important;
 }
 #navigation a:hover {
