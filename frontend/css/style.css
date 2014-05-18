@@ -290,9 +290,11 @@ h1{
   line-height: 140px;
   display: none;
   text-align: left;
-  text-transform: lowercase;
-  font-size: 14px;
-  font-family: 'proxima-nova','Helvetica','Avenir','Arial',sans-serif;
+  font-family: Gill Sans, Verdana;
+  font-size: 10px !important;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 #navigation a {
   color: #acacac;
