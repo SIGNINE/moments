@@ -532,6 +532,10 @@ text-align: left;
   line-height: 14px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
 }
 
@@ -554,4 +558,9 @@ text-align: left;
 
 .logo img {
   border-bottom: 5px #4DBCE9 solid !important;
+}
+
+.logo img:hover {
+  border-bottom: 5px #D1E751 solid !important;
+
 }
