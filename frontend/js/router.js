@@ -6,7 +6,8 @@ define([
   'models/user/UserModel',
   'views/home/HomeView',
   'views/photos/PhotosView',
-], function($, _, Backbone, UserModel, HomeView, PhotosView) {
+  'views/photos/CirclesView',
+], function($, _, Backbone, UserModel, HomeView, PhotosView, CirclesView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
@@ -14,6 +15,7 @@ define([
       'photos': 'showPhotos',
       'register': 'newUser',
       'login': 'loginUser',
+      'circles': 'showCircles'
       // Default
       '*actions': 'defaultAction'
     }
@@ -28,6 +30,14 @@ define([
         // Call render on the module we loaded in via the dependency array
         var photosView = new PhotosView();
         photosView.render();
+
+    });
+
+    app_router.on('route:showPhotos', function(){
+   
+        // Call render on the module we loaded in via the dependency array
+        var circlesView = new CirclesView();
+        circlesView.render();
 
     });
 
