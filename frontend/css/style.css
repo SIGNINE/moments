@@ -287,7 +287,7 @@ h1{
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);  /* <-- Just for the demo, Yes I like pretty fonts... */
 
 #navigation {
-  line-height: 140px;
+  line-height: 140px !important;
   display: none;
   text-align: left;
   font-family: Gill Sans, Verdana;
