@@ -342,7 +342,9 @@ h6{
     background-color:#4DBCE9;
     overflow:hidden;
     border-radius: 50%;
-    border: 3px solid #e2e2e2;
+    -moz-box-shadow: inset #e2e2e2 0 -3px 0 0;
+    -webkit-box-shadow: inset #e2e2e2 0 -3px 0 0;
+    box-shadow: inset #e2e2e2 0 -3px 0 0;
   -webkit-transition: all 0.7s ease;
   -moz-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
@@ -358,7 +360,9 @@ h6{
     margin:1.66%;
     background-color:#1E1E1E;
     overflow:hidden;
-    border: 3px solid #e2e2e2;
+    -moz-box-shadow: inset #e2e2e2 0 -3px 0 0;
+    -webkit-box-shadow: inset #e2e2e2 0 -3px 0 0;
+    box-shadow: inset #e2e2e2 0 -3px 0 0;
   -webkit-transition: all 0.7s ease;
   -moz-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
