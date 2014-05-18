@@ -10,21 +10,11 @@ define([
     el: $("#container"),
 
     events: {
-      'click input#btn_register': 'register'
+      'click input#btn_register': 'newUser'
     },
 
-    register:function(e){
-      e.preventDefault();
+    newUser: function(){
       alert("hi");
-      var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk', type: 'login'});
-        user.save({
-          success: function(model, resp){
-            alert("wel done!");
-          },
-          error: function(){
-            alert("aw we failed :(");
-          }
-        });
     },
 
     render: function(){
