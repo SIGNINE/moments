@@ -3,15 +3,16 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'models/user/UserModel',
   'views/home/HomeView',
   'views/photos/PhotosView',
-], function($, _, Backbone, HomeView, PhotosView) {
+], function($, _, Backbone, UserModel, HomeView, PhotosView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
       'photos': 'showPhotos',
-      
+      'register': 'newUser',
       // Default
       '*actions': 'defaultAction'
     }
@@ -26,6 +27,20 @@ define([
         // Call render on the module we loaded in via the dependency array
         var photosView = new PhotosView();
         photosView.render();
+
+    });
+
+    app_router.on('route:newUser', function(){
+   
+        var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk'});
+        user.save({
+          success: function(model, resp){
+            alert("wel done!");
+          },
+          error: function(){
+            alert("aw we failed :(");
+          }
+        });
 
     });
 
