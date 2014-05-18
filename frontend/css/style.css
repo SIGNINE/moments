@@ -287,12 +287,14 @@ h1{
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);  /* <-- Just for the demo, Yes I like pretty fonts... */
 
 #navigation {
-  line-height: 140px;
+  line-height: 140px !important;
   display: none;
   text-align: left;
-  text-transform: lowercase;
-  font-size: 14px;
-  font-family: 'proxima-nova','Helvetica','Avenir','Arial',sans-serif;
+  font-family: Gill Sans, Verdana;
+  font-size: 10px !important;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 #navigation a {
   color: #acacac;
@@ -303,16 +305,27 @@ h1{
   padding-left: 15px;
   padding-right: 15px;
   font-weight: 400;
-  -webkit-transition: all 0.7s ease;
-  -moz-transition: all 0.7s ease;
-  -o-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
+.upload {
+  background-color: #4DBCE9;
+  border-color: #4DBCE9 !important;
+  color: white !important;
+}
+
+.upload:hover {
+  background-color: #26ADE4 !important;
+  border-color: #26ADE4 !important;
+}
 #navigation a:hover {
-  color: #333;
+  background-color: #D1E751;
+  color: white;
   text-decoration: none;
-  border: 3px solid #333;
+  border: 3px solid #D1E751;
 }
 .circle {
     float:left;
@@ -320,7 +333,7 @@ h1{
     width: 30%;
     padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
     margin:1.66%;
-    background-color:#1E1E1E;
+    background-color:#4DBCE9;
     overflow:hidden;
     border-radius: 50%;
   -webkit-transition: all 0.7s ease;
@@ -462,4 +475,104 @@ p{
 #bottom a:hover{
     background:#ECECEC;
     border:1px solid #fff;
+}
+
+.logotext{
+  display: inline-block;
+}
+
+.logotext span{
+  padding: 5px 10px 5px 10px;
+  margin-right: 2.5px; 
+  background-color: black; 
+  color: white;
+}
+.splash_logo{
+float:left;
+width: 100%;
+text-align: left;
+}
+.splash_logo h1{
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  color: #000;
+  margin: 0;
+  padding: 0px 0px 6px 0px;
+  font-size: 51px;
+  line-height: 44px;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
+.splash_logo h3{
+  font-family: Gill Sans, Verdana;
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+#splash{
+  margin-top: 10%;
+  text-align: left;
+}
+
+#contents{
+  display: none;
+}
+
+.logotext button {
+  background-color: black;
+  color: white;
+  border: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 10px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.logotext button:hover {
+  background-color: #D1E751;
+}
+
+#contents {
+
+  font-family: Gill Sans, Verdana;
+  font-size: 10px !important;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+}
+
+.logotext input {
+  width: 25%;
+  float: left; 
+  margin-right: 2%;
+  height: 30px !important;
+  border-radius: 0px !important;
+  border-left: 0px !important;
+  border-bottom: 0px !important;
+  border-right: 0px !important;
+  border-top: 5px #4DBCE9 solid !important;
+  font-family: Gill Sans, Verdana;
+  font-size: 8px !important;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.logo img {
+  border-bottom: 5px #4DBCE9 solid !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.logo img:hover {
+  border-bottom: 5px #D1E751 solid !important;
 }

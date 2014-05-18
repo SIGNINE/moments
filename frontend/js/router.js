@@ -3,15 +3,19 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'models/user/UserModel',
   'views/home/HomeView',
   'views/photos/PhotosView',
-], function($, _, Backbone, HomeView, PhotosView) {
+  'views/circles/CirclesView',
+], function($, _, Backbone, UserModel, HomeView, PhotosView, CirclesView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
       'photos': 'showPhotos',
-      
+      'register': 'newUser',
+      'login': 'loginUser',
+      'circles': 'showCircles',
       // Default
       '*actions': 'defaultAction'
     }
@@ -24,8 +28,48 @@ define([
     app_router.on('route:showPhotos', function(){
    
         // Call render on the module we loaded in via the dependency array
+        if(!$("#contents").is(":visible"))
+          $("#contents").fadeIn();
         var photosView = new PhotosView();
         photosView.render();
+
+    });
+
+    app_router.on('route:showCircles', function(){
+   
+        // Call render on the module we loaded in via the dependency array
+        if(!$("#contents").is(":visible"))
+          $("#contents").fadeIn();
+        var circlesView = new CirclesView();
+        circlesView.render();
+
+    });
+
+    app_router.on('route:newUser', function(){
+   
+        var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk'});
+        user.save({
+          success: function(model, resp){
+            alert("wel done!");
+          },
+          error: function(){
+            alert("aw we failed :(");
+          }
+        });
+
+    });
+
+    app_router.on('route:loginUser', function(){
+   
+        var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk', type: 'login'});
+        user.save({
+          success: function(model, resp){
+            alert("wel done!");
+          },
+          error: function(){
+            alert("aw we failed :(");
+          }
+        });
 
     });
 
