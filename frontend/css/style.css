@@ -467,6 +467,13 @@ p{
 .logotext{
   display: inline-block;
 }
+
+.logotext span{
+  padding: 5px 10px 5px 10px;
+  margin-right: 2.5px; 
+  background-color: black; 
+  color: white;
+}
 .splash_logo{
 float:left;
 width: 100%;
