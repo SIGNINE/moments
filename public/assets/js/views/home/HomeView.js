@@ -9,7 +9,7 @@ define([
     el: $("#container"),
 
     events: {
-      'click input#btn_register': 'register'
+      'click button#btn_register': 'register'
     },
 
     register:function(e){
