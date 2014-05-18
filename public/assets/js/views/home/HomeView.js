@@ -13,7 +13,7 @@ define([
     },
 
     register:function(e){
-      alert("hi");
+      alert(this.model.get("first_name"));
     },
 
     render: function(){
