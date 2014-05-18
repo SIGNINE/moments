@@ -17,7 +17,7 @@ define([
       _.bindAll(this, 'submit');
     },
 
-    submit:function(e){
+    register:function(e){
       e.preventDefault();
       alert("hi");
       var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk', type: 'login'});
