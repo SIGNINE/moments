@@ -524,3 +524,7 @@ text-align: left;
 .logotext button:hover {
   background-color: #D1E751;
 }
+
+.logotext input {
+  width: 50%;
+}
