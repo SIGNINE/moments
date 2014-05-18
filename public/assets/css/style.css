@@ -488,10 +488,8 @@ p{
 }
 
 .logotext span{
-  padding: 5px 10px 5px 10px;
-  margin-right: 2.5px; 
-  background-color: black; 
-  color: white;
+  background-color: transparent; 
+  border-bottom: 3px solid #26ADE4;
 }
 .splash_logo{
 float:left;
@@ -517,7 +515,6 @@ text-align: left;
   font-style: italic;
   color: #aaaaaa;
   font-weight: normal;
-  margin: 0px;
 }
 
 .splash_logo h3{
