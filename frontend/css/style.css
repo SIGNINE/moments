@@ -552,7 +552,6 @@ text-align: left;
   letter-spacing: 2px;
 }
 
-#logo img {
-  display: none;
+.logo img {
   border-bottom: 5px #4DBCE9 solid !important;
 }
