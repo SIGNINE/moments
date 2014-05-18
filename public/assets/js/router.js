@@ -81,6 +81,13 @@ define([
         homeView.render();
     });
 
+    $(document).ready(function() {
+      $(".fancybox").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none'
+      });
+    });
+
     //Sliding menu script
 
     var someElement;
