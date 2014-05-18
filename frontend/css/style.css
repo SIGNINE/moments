@@ -309,6 +309,13 @@ h1{
   transition: all 0.3s ease;
 }
 
+.upload {
+  float: right;
+  background-color: #4DBCE9;
+  border-color: #4DBCE9;
+  color: white;
+}
+
 #navigation a:hover {
   background-color: #D1E751;
   color: white;
