@@ -7,5 +7,6 @@ class User < ActiveRecord::Base
   validates :email, format: { with: EMAIL_REGEX } 
 
   has_many :photos
+  has_many :albums
   has_and_belongs_to_many :circles
 end
