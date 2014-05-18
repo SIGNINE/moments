@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
   EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
   validates :password, length: { in: 6..20 }
   validates :email, format: { with: EMAIL_REGEX } 
 
