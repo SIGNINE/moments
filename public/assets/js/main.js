@@ -8,7 +8,6 @@ require.config({
     jquery: 'libs/jquery/jquery-min',
     underscore: 'libs/underscore/underscore-min',
     backbone: 'libs/backbone/backbone-min',
-    fancybox: 'libs/fancybox/jquery.fancybox.pack',
     templates: '../templates'
   }
 
