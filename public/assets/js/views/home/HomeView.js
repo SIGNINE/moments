@@ -2,9 +2,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'models/user/UserModel',
   'text!templates/home/homeTemplate.html'
-], function($, _, Backbone, homeTemplate, UserModel){
+], function($, _, Backbone, homeTemplate){
 
   var HomeView = Backbone.View.extend({
     el: $("#container"),

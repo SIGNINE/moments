@@ -76,7 +76,8 @@ define([
     app_router.on('route:defaultAction', function (actions) {
      
        // We have no matching route, lets display the home page 
-        var homeView = new HomeView();
+        var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk', type: 'login'});
+        var homeView = new HomeView({model: user});
         homeView.render();
     });
 
