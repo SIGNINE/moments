@@ -515,16 +515,12 @@ text-align: left;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: 10px;
-  -webkit-transition: all 0.7s ease;
-  -moz-transition: all 0.7s ease;
-  -o-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .logotext button:hover {
   background-color: #D1E751;
-}
-
-.logotext button:active {
-  background-color: #26ADE4;
 }
