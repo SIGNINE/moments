@@ -1,6 +1,7 @@
 class Album < ActiveRecord::Base
   validates :name, presence: true
 
-  belongs_to :user
-  has_and_belongs_to_many :photos, dependent: :destroy
+  belongs_to :user, dependent: :destroy
+  has_and_belongs_to_many :photos 
+  has_and_belongs_to_many :circles
 end
