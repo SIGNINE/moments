@@ -20,6 +20,6 @@ define([
 
     });
 
-  	return OwnerModel;
+  	return UserModel;
 
 });
