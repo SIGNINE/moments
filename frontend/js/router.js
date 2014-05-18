@@ -28,6 +28,8 @@ define([
     app_router.on('route:showPhotos', function(){
    
         // Call render on the module we loaded in via the dependency array
+        if(!$("#contents").is(":visible"))
+          $("#contents").fadeIn();
         var photosView = new PhotosView();
         photosView.render();
 
@@ -36,7 +38,8 @@ define([
     app_router.on('route:showCircles', function(){
    
         // Call render on the module we loaded in via the dependency array
-        $("#contents").fadeIn();
+        if(!$("#contents").is(":visible"))
+          $("#contents").fadeIn();
         var circlesView = new CirclesView();
         circlesView.render();
 
