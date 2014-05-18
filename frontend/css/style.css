@@ -479,14 +479,19 @@ float:left;
 width: 100%;
 }
 .splash_logo h1{
-  font-family:Georgia,serif;
-  font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;
-  font-size: 70px;
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  color: #444;
+  margin: 0;
+  padding: 0px 0px 6px 0px;
+  font-size: 51px;
+  line-height: 44px;
+  letter-spacing: -2px;
+  font-weight: bold;
 }
 
 .splash_logo h3{
   font-family: Gill Sans, Verdana;
-  font-size: 15px;
+  font-size: 11px;
   line-height: 14px;
   text-transform: uppercase;
   letter-spacing: 2px;
