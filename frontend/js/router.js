@@ -13,6 +13,7 @@ define([
       // Define some URL routes
       'photos': 'showPhotos',
       'register': 'newUser',
+      'login': 'loginUser',
       // Default
       '*actions': 'defaultAction'
     }
@@ -32,7 +33,22 @@ define([
 
     app_router.on('route:newUser', function(){
    
-        var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk'});
+        var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk', type: ''});
+        alert(user.get("first_name"));
+        user.save({
+          success: function(model, resp){
+            alert("wel done!");
+          },
+          error: function(){
+            alert("aw we failed :(");
+          }
+        });
+
+    });
+
+    app_router.on('route:loginUser', function(){
+   
+        var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk', type: 'login'});
         alert(user.get("first_name"));
         user.save({
           success: function(model, resp){
