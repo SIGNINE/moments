@@ -35,16 +35,17 @@ define([
 
     window.app_router = new AppRouter;
 
+
+
+    app_router.on('route:showPhotos', function(){
+
     $.ajaxSend(function(event, request) {
       var token = app_router.getCookie("session_id");
       if (token) {
         request.setRequestHeader("session_id", token);
       }
     });
-
-    app_router.on('route:showPhotos', function(){
-
-        
+    
         alert("testing");
         // Call render on the module we loaded in via the dependency array
         if(!$("#contents").is(":visible"))
