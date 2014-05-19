@@ -20,7 +20,7 @@ define([
       this.model.clear();
       this.model.set({"email":$email,"password":$pw,"session_id":window.app_router.getCookie("session_id")});
         this.model.save({}, {
-          success: function(){
+          success: function(model, resp){
             window.r = resp;
             document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+days*86400000).toGMTString())+';path=/';
             window.location= '#circles';
