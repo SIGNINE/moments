@@ -24,8 +24,8 @@ define([
   var initialize = function(){
 
     var app_router = new AppRouter;
-    
-    Backbone.View.goTo = function (loc) {
+
+    Backbone.View.prototype.goTo = function (loc) {
       app_router.navigate(loc, true);
     };
 
