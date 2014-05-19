@@ -22,6 +22,7 @@ define([
         this.model.save({}, {
           success: function(){
             window.location= '#circles';
+            window.location.reload();
           },
           error: function(){
             setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
