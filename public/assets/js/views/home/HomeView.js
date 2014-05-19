@@ -21,6 +21,7 @@ define([
       this.model.set({"email":$email,"password":$pw});
         this.model.save({}, {
           success: function(){
+            alert("hi");
             app_router.navigate('circles', {trigger: true});
           },
           error: function(){

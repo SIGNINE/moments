@@ -46,7 +46,6 @@ define([
     });
 
     app_router.on('route:newUser', function(){
-       alert("hi");
        app_router.navigate('circles', {trigger: true});
 
     });
