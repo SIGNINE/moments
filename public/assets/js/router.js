@@ -35,10 +35,6 @@ define([
 
     window.app_router = new AppRouter;
 
-
-
-    app_router.on('route:showPhotos', function(){
-
     $(document).ajaxSend(function(event, request) {
       var token = app_router.getCookie("session_id");
       if (token) {
@@ -46,7 +42,8 @@ define([
       }
     });
 
-        alert("testing");
+    app_router.on('route:showPhotos', function(){
+
         // Call render on the module we loaded in via the dependency array
         if(!$("#contents").is(":visible"))
           $("#contents").fadeIn();
