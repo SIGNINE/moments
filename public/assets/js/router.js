@@ -35,12 +35,21 @@ define([
 
     window.app_router = new AppRouter;
 
-    $(document).ajaxSend(function(event, request) {
-      var token = app_router.getCookie("session_id");
-      if (token) {
-        request.setRequestHeader("session_id", token);
+    var _sync = Backbone.sync;
+    var token = app_router.getCookie("session_id");
+    Backbone.sync = function(method, model, options) {
+
+      if( model && (method === 'create' || method === 'update' || method === 'patch') ) {
+        options.contentType = 'application/json';
+        options.data = JSON.stringify(options.attrs || model.toJSON());
       }
-    });
+
+      _.extend( options.data, {
+        "access_token": token
+      });
+
+      return _sync.call( this, method, model, options );
+    }
 
     app_router.on('route:showPhotos', function(){
 
