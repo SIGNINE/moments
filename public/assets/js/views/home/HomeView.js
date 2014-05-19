@@ -21,7 +21,7 @@ define([
       this.model.set({"email":$email,"password":$pw});
         this.model.save({}, {
           success: function(){
-            app_router.navigate('circles', {trigger: true});
+            window.location('#circles');
           },
           error: function(){
             setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
