@@ -27,6 +27,7 @@ define([
             window.location.reload();
           },
           error: function(){
+            $("#errormsg").html("Registration failed. Please try again.");
             setTimeout('$(".fbg").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
             setTimeout('$(".acidjs-hellobar").slideToggle();', 7000);
           }
