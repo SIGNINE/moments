@@ -23,7 +23,7 @@ define([
           },
           error: function(){
             setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 3000);
-            setTimeout('$(".acidjs-hellobar").slideToggle();', 3000);
+            setTimeout('$(".acidjs-hellobar").slideToggle();', 6000);
 
           }
         });
