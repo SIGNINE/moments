@@ -808,7 +808,6 @@ background-color:#000000;
     color: #fff;
     background: #666;
     transition: margin 300ms ease-in-out;
-    box-shadow: 0 0 2px 2px rgba(58, 58, 58, .50);
 }
  
 .acidjs-hellobar,
@@ -847,7 +846,7 @@ background-color:#000000;
 {
     margin-top: -37px;
     padding: 0 64px;
-    border-bottom: solid 3px #fff;
+    border-bottom: solid 3px #4DBCE9;
     font-size: 12px;
 }
  
@@ -913,7 +912,7 @@ background-color:#000000;
 .acidjs-hellobar.acidjs-hellobar-e34c26 > div,
 .acidjs-hellobar.acidjs-hellobar-e34c26 label span
 {
-    background: #e34c26;
+    background: #ECECEC;
 }
  
 .acidjs-hellobar.acidjs-hellobar-78ba00 > div,
