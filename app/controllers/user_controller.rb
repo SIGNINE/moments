@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 class UserController < ApplicationController
 
   # register
@@ -17,6 +19,8 @@ class UserController < ApplicationController
           return
         end
 
+        user.password = hashify_password params[:password]
+
         begin 
           user.save!
           render json: { status: 200 }
@@ -31,21 +35,19 @@ class UserController < ApplicationController
 
   private
 
-  def validate_params params_list
-    missing_params = []
-    params_list.each do |p|
-      missing_params << p unless params.include?(p) && params[p] != ''
-    end
-
-    unless missing_params.empty? 
-      render json: { status: 422, error: "Missing params: #{missing_params}" }, status: 422
-      false
-    else
-      true
-    end
-  end
- 
   def user_exists? email
     User.find_by_email(email) != nil
+  end
+
+  def hashify_password password
+    salt = generate_salt
+    hashed = Digest::SHA1.base64digest(password + salt)
+    salt + hashed
+  end
+
+  def generate_salt
+    o = [('a'..'z'), ('A'..'Z'), (1..9)].map { |i| i.to_a }.flatten
+    o = o.map { o[rand(o.length)] }
+    (0..9).map { o[rand(o.length)] }.join
   end
 end
