@@ -11,6 +11,7 @@ define([
     render: function(){
       
       alert("ho ho ho");
+      $(".main").fadeOut();
       this.$el.hide();
       this.$el.hide().html(circlesTemplate).fadeIn();
  
