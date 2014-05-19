@@ -22,8 +22,8 @@ define([
             //$(".followingBallsG").hide();
           },
           error: function(){
-            setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 3000);
-            setTimeout('$(".acidjs-hellobar").slideToggle();', 6000);
+            setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 2000);
+            setTimeout('$(".acidjs-hellobar").slideToggle();', 5000);
 
           }
         });
