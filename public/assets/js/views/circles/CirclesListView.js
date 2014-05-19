@@ -20,7 +20,7 @@ define([
       };
 
       var compiledTemplate = _.template( circlesListTemplate, data );
-      $("#circles-list").html( compiledTemplate ); 
+      $("#circles-list").prepend( compiledTemplate ); 
     }
   });
   return CirclesListView;
