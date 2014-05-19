@@ -17,7 +17,7 @@ define([
       $(".fbg").show();
       $email = $("button#btn_register").parent().find("input:text").val();
       $pw = $("button#btn_register").parent().find("input:password").val();
-      this.model.clear();
+      this.model.clear().set(this.model.defaults);
       this.model.set({"email":$email,"password":$pw});
         this.model.save({}, {
           success: function(){
@@ -36,7 +36,7 @@ define([
       $(".fbg").show();
       $email = $("button#btn_login").parent().find("input:text").val();
       $pw = $("button#btn_login").parent().find("input:password").val();
-      this.model.clear();
+      this.model.clear().set(this.model.defaults);
       this.model.set({"email":$email,"password":$pw, "type":"login"});
         this.model.save({}, {
           success: function(model, resp){

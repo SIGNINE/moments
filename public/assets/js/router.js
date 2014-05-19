@@ -34,10 +34,8 @@ define([
   var initialize = function(){
 
     window.app_router = new AppRouter;
-    
+
     var user = new UserModel();
-    var token = app_router.getCookie("session_id");
-    user.set({"token":token});
 
     app_router.on('route:showPhotos', function(){
 
