@@ -42,6 +42,7 @@ define([
           success: function(model, resp){
             window.r = resp;
             document.cookie="session_id="+window.r.session_id;
+            window.location.reload();
           },
           error: function(resp){
             window.r = resp;
