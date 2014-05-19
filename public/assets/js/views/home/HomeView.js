@@ -46,8 +46,9 @@ define([
             window.location.reload();
           },
           error: function(resp){
-            window.r = resp;
-            alert("failed");
+            $("#errormsg").html("Invalid login. Please try again.");
+            setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
+            setTimeout('$(".acidjs-hellobar").slideToggle();', 7000);
           }
         });
     },
