@@ -106,7 +106,7 @@ class UserController < ApplicationController
 
   def not_authenticated
     session_id = session[:session_id]
-    return if session_id == nil || sessn_id == ''
+    return if session_id == nil || session_id == ''
 
     user_id = find_session session_id
     return if user_id == nil
