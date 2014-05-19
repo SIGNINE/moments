@@ -354,6 +354,11 @@ h6{
   border: 3px solid #e2e2e2 !important;
   color: #acacac !important;
   background-color: transparent !important;
+  -webkit-transform: scale(0.8,0.8);
+  -moz-transform: scale(0.8,0.8);
+  -ms-transform: scale(0.8,0.8);
+  -o-transform: scale(0.8,0.8);
+  transform: scale(0.8,0.8);
 }
 
 .square {
