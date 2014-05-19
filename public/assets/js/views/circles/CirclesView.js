@@ -11,8 +11,6 @@ define([
     render: function(){
       
       alert("ho ho ho");
-      $('.menu li').removeClass('active');
-      $('.menu li a[href="#"]').parent().addClass('active');
       this.$el.hide();
       this.$el.hide().html(circlesTemplate).fadeIn();
  
