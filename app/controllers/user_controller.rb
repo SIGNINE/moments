@@ -4,7 +4,7 @@ class UserController < ApplicationController
   def create
     respond_to do |format|
       format.json do
-        validate_params [:email, :password]
+        return unless validate_params [:email, :password]
 
         if user_exists? params[:email]
           render json: { status: 422, error: "Email: #{params[:email]} already exists"}, status: 422
@@ -29,18 +29,19 @@ class UserController < ApplicationController
     end
   end
 
-
-
   private
 
   def validate_params params_list
     missing_params = []
     params_list.each do |p|
-      missing_params << p unless params.include?(p) && params[p] != nil 
+      missing_params << p unless params.include?(p) && params[p] != ''
     end
 
     unless missing_params.empty? 
       render json: { status: 422, error: "Missing params: #{missing_params}" }, status: 422
+      false
+    else
+      true
     end
   end
  
