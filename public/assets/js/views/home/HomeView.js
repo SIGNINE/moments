@@ -22,7 +22,7 @@ define([
             //$(".followingBallsG").hide();
           },
           error: function(){
-            //$(".followingBallsG").hide();
+            setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 3000);
           }
         });
     },
