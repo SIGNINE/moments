@@ -41,7 +41,7 @@ define([
         this.model.save({}, {
           success: function(model, resp){
             window.r = resp;
-            alert("hi");
+            document.cookie="session_id="+window.r.session_id;
           },
           error: function(resp){
             window.r = resp;
