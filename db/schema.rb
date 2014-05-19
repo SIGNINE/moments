@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20140518153320) do
     t.string   "last_name",  limit: 100
     t.string   "avatar_url"
     t.string   "email",      limit: 100, null: false
-    t.string   "password",   limit: 50,  null: false
+    t.string   "password",               null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
