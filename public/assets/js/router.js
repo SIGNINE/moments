@@ -46,16 +46,8 @@ define([
     });
 
     app_router.on('route:newUser', function(){
-   
-        var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk'});
-        user.save({
-          success: function(model, resp){
-            alert("wel done!");
-          },
-          error: function(){
-            alert("aw we failed :(");
-          }
-        });
+       alert("hi");
+       app_router.navigate('circles', {trigger: true});
 
     });
 
