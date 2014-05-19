@@ -16,7 +16,6 @@ define([
       'register': 'newUser',
       'login': 'loginUser',
       'circles': 'showCircles',
-      'myModal': 'modal',
       // Default
       '*actions': 'defaultAction'
     }
@@ -25,11 +24,7 @@ define([
   var initialize = function(){
 
     var app_router = new AppRouter;
-    
-    app_router.on('route:modal', function(){
 
-
-    });
     app_router.on('route:showPhotos', function(){
    
         // Call render on the module we loaded in via the dependency array
