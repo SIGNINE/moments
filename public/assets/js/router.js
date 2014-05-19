@@ -83,6 +83,8 @@ define([
 
     //Sliding menu script
 
+    $(".acidjs-hellobar").slideUp(); //Keep acidjs slid up first
+
     var someElement;
     var timeoutId;
 
