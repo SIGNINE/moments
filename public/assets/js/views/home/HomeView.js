@@ -21,7 +21,7 @@ define([
       this.model.set({"email":$email,"password":$pw});
         this.model.save({}, {
           success: function(){
-            this.hi();
+            HomeView.hi();
           },
           error: function(){
             setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
