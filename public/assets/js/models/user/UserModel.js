@@ -5,9 +5,6 @@ define([
 
   var UserModel = Backbone.Model.extend({
 
-      defaults: {
-        session_id: window.app_router.getCookie("session_id")
-      },
       initialize: function( options ) {
   		},
 
