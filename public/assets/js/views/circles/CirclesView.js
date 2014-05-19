@@ -13,7 +13,7 @@ define([
     render: function(){
 
       this.$el.hide();
-      this.$el.html(photosTemplate).fadeIn();
+      this.$el.html(circlesTemplate).fadeIn();
 
       var photo1 = new CirclesModel({title:'Photo 1', url: 'http://i.imgur.com/ODT5hTG.png?1'}); 
       var photo2 = new CirclesModel({title:'Photo 2', url: 'http://i.imgur.com/ODT5hTG.png?1'}); 
