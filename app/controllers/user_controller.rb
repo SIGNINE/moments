@@ -1,7 +1,7 @@
 require 'digest/sha1'
 
 class UserController < ApplicationController
-  before_fiter :not_authenticated, only: [:login]
+  before_filter :not_authenticated, only: [:login]
 
   def login
     respond_to do |format|
@@ -22,6 +22,7 @@ class UserController < ApplicationController
         end
 
       end
+    end
   end
 
   # register
@@ -116,4 +117,4 @@ class UserController < ApplicationController
     end
   end
 
- end
+end
