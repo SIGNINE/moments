@@ -834,6 +834,10 @@ background-color:#000000;
 }
  
 /* these rules are required only by the demo page at http://experiments.wemakesites.net/css3-hello-bar.html */
+.acidjs-hellobar {
+  display: none;
+}
+
 .acidjs-hellobar > div,
 .acidjs-hellobar label
 {
