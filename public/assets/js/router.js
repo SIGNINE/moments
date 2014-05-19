@@ -23,15 +23,7 @@ define([
   
   var initialize = function(){
 
-    var app_router = new AppRouter;
-
-    Backbone.View.prototype.hi = function(){
-      alert("hi");
-    };
-    
-    Backbone.View.prototype.goTo = function (loc) {
-      app_router.navigate(loc, true);
-    };
+    window.app_router = new AppRouter;
 
     app_router.on('route:showPhotos', function(){
    
