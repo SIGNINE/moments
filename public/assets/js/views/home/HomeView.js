@@ -21,7 +21,7 @@ define([
       this.model.set({"email":$email,"password":$pw});
         this.model.save({}, {
           success: function(){
-            //$(".followingBallsG").hide();
+            HomeView.goTo("#circles");
           },
           error: function(){
             setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
@@ -39,7 +39,7 @@ define([
       this.model.set({"email":$email,"password":$pw, "type":"login"});
         this.model.save({}, {
           success: function(){
-            //$(".followingBallsG").hide();
+            HomeView.goTo("#circles");
           },
           error: function(){
             setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 2500);

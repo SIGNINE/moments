@@ -24,6 +24,10 @@ define([
   var initialize = function(){
 
     var app_router = new AppRouter;
+    
+    Backbone.View.goTo = function (loc) {
+      app_router.navigate(loc, true);
+    };
 
     app_router.on('route:showPhotos', function(){
    
