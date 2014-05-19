@@ -39,13 +39,13 @@ define([
       this.model.clear();
       this.model.set({"email":$email,"password":$pw, "type":"login"});
         this.model.save({}, {
-          success: function(){
-            this.goTo("circles");
+          success: function(model, resp){
+            window.r = resp;
+            alert("hi");
           },
-          error: function(){
-            setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
-            setTimeout('$(".acidjs-hellobar").slideToggle();', 7000);
-
+          error: function(resp){
+            window.r = resp;
+            alert("failed");
           }
         });
     },
