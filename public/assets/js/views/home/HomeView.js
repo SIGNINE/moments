@@ -27,7 +27,7 @@ define([
             window.location.reload();
           },
           error: function(){
-            setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
+            setTimeout('$(".fbg").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
             setTimeout('$(".acidjs-hellobar").slideToggle();', 7000);
           }
         });
@@ -47,7 +47,7 @@ define([
           },
           error: function(resp){
             $("#errormsg").html("Invalid login. Please try again.");
-            setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
+            setTimeout('$(".fbg").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
             setTimeout('$(".acidjs-hellobar").slideToggle();', 7000);
           }
         });
