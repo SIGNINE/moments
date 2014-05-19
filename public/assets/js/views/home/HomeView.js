@@ -19,10 +19,10 @@ define([
       this.model.set({"email":$email,"password":$pw});
         this.model.save({}, {
           success: function(){
-            $(".followingBallsG").hide();
+            //$(".followingBallsG").hide();
           },
           error: function(){
-            $(".followingBallsG").hide();
+            //$(".followingBallsG").hide();
           }
         });
     },
