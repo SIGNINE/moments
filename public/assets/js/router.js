@@ -34,22 +34,10 @@ define([
   var initialize = function(){
 
     window.app_router = new AppRouter;
-
-    var _sync = Backbone.sync;
+    
+    var user = new UserModel();
     var token = app_router.getCookie("session_id");
-    Backbone.sync = function(method, model, options) {
-
-      if( model && (method === 'create' || method === 'update' || method === 'patch') ) {
-        options.contentType = 'application/json';
-        options.data = JSON.stringify(options.attrs || model.toJSON());
-      }
-
-      _.extend( options.data, {
-        "access_token": token
-      });
-
-      return _sync.call( this, method, model, options );
-    }
+    user.set({"token":token});
 
     app_router.on('route:showPhotos', function(){
 
@@ -93,7 +81,7 @@ define([
     app_router.on('route:defaultAction', function (actions) {
      
        // We have no matching route, lets display the home page 
-        var user = new UserModel();
+
         var homeView = new HomeView({model: user});
         homeView.render();
     });
