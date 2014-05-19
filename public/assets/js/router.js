@@ -18,6 +18,9 @@ define([
       'circles': 'showCircles',
       // Default
       '*actions': 'defaultAction'
+    },
+    alertTime: function(){
+      alert("hi");
     }
   });
   
@@ -26,7 +29,8 @@ define([
     window.app_router = new AppRouter;
 
     app_router.on('route:showPhotos', function(){
-   
+
+        app_router.alertTime();
         // Call render on the module we loaded in via the dependency array
         if(!$("#contents").is(":visible"))
           $("#contents").fadeIn();
