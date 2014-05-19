@@ -16,6 +16,7 @@ define([
       'register': 'newUser',
       'login': 'loginUser',
       'circles': 'showCircles',
+      'signout': 'signOut',
       // Default
       '*actions': 'defaultAction'
     },
@@ -44,6 +45,14 @@ define([
           $("#contents").fadeIn();
         var photosView = new PhotosView();
         photosView.render();
+
+    });
+
+    app_router.on('route:signOut', function(){
+
+        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        app_router.navigate('', {trigger: true});
+
 
     });
 
