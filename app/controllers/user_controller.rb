@@ -1,7 +1,7 @@
 require 'digest/sha1'
 
 class UserController < ApplicationController
-  before_filter :not_authenticated, only: [:login]
+  before_filter :not_authenticated, only: [:login, :create]
 
   def login
     respond_to do |format|
@@ -72,7 +72,7 @@ class UserController < ApplicationController
     salt = user_pass[0..9]
     hashed_pass = Digest::SHA1.base64digest(provided_pass + salt)
 
-    (salt + user_pass) == hashed_pass
+    user_pass == (salt + hashed_pass)
   end
 
   def generate_salt
