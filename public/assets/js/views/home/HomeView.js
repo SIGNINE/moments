@@ -6,7 +6,7 @@ define([
 ], function($, _, Backbone, homeTemplate){
 
   var HomeView = Backbone.View.extend({
-    el: $("#container"),
+    el: $("#page"),
 
     events: {
       'click button#btn_register': 'register',
@@ -21,7 +21,7 @@ define([
       this.model.set({"email":$email,"password":$pw});
         this.model.save({}, {
           success: function(){
-            window.location('#circles');
+            window.location= '#circles';
           },
           error: function(){
             setTimeout('$(".followingBallsG").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
