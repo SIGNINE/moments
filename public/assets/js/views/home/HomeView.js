@@ -13,15 +13,16 @@ define([
     },
 
     register:function(e){
+      $("#followingBallsG").show();
       $email = $("button#btn_register").parent().find("input:text").val();
       $pw = $("button#btn_register").parent().find("input:password").val();
       this.model.set({"email":$email,"password":$pw});
         this.model.save({}, {
           success: function(){
-            alert("Registration succes.");
+            $("followingBallsG").hide();
           },
           error: function(){
-            alert("Boo!");
+            $("followingBallsG").hide();
           }
         });
     },
