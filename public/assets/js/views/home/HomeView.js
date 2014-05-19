@@ -13,15 +13,16 @@ define([
     },
 
     register:function(e){
+      $("button#btn_register").
       $email = $("button#btn_register").parent().find("input:text").val();
       $pw = $("button#btn_register").parent().find("input:password").val();
       this.model.set({"email":$email,"password":$pw});
         this.model.save({}, {
           success: function(){
-            alert("wel done!");
+            alert("Registration succes.");
           },
           error: function(){
-            alert("aw we failed :(");
+            alert("Boo!");
           }
         });
     },
