@@ -15,8 +15,8 @@ class UserController < ApplicationController
         end
 
         if password_matches? user.password, params[:password]
-          register_session user.id
-          render json: { status: 200 }
+          session_id = register_session user.id
+          render json: { status: 200, session_id: session_id }
         else
           render json: { status: 401, error: "Wrong password" }, status: 401
         end
@@ -103,6 +103,7 @@ class UserController < ApplicationController
     $redis.expire(key, 24*60*60)
 
     session[:session_id] = session_id
+    session_id
   end
 
   def not_authenticated
