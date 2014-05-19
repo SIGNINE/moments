@@ -31,6 +31,7 @@ define([
     app_router.on('route:showPhotos', function(){
 
         app_router.alertTime();
+        alert("test");
         // Call render on the module we loaded in via the dependency array
         if(!$("#contents").is(":visible"))
           $("#contents").fadeIn();
