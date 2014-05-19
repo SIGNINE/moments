@@ -17,7 +17,7 @@ define([
       $pw = $("button#btn_register").parent().find("input:password").val();
       this.model.set({"email":$email,"password":$pw});
         this.model.save({
-          success: function(model, resp){
+          success: function(){
             alert("wel done!");
           },
           error: function(){
