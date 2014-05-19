@@ -37,7 +37,7 @@ define([
       $email = $("button#btn_login").parent().find("input:text").val();
       $pw = $("button#btn_login").parent().find("input:password").val();
       this.model.clear();
-      this.model.set({"email":$email,"password":$pw, "type":"login","session_id":window.app_router.getCookie("session_id")}});
+      this.model.set({"email":$email,"password":$pw, "type":"login","session_id":window.app_router.getCookie("session_id")});
         this.model.save({}, {
           success: function(model, resp){
             window.r = resp;
