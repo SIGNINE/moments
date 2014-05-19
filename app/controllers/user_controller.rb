@@ -103,12 +103,11 @@ class UserController < ApplicationController
     $redis.set(key, user_id)
     $redis.expire(key, 24*60*60)
 
-    session[:session_id] = session_id
     session_id
   end
 
   def not_authenticated
-    session_id = session[:session_id]
+    session_id = params[:session_id]
     return if session_id == nil || session_id == ''
 
     user_id = find_session session_id
