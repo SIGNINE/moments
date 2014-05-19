@@ -39,13 +39,13 @@ define([
 
     app_router.on('route:showPhotos', function(){
 
-    $.ajaxSend(function(event, request) {
+    $(document).ajaxSend(function(event, request) {
       var token = app_router.getCookie("session_id");
       if (token) {
         request.setRequestHeader("session_id", token);
       }
     });
-    
+
         alert("testing");
         // Call render on the module we loaded in via the dependency array
         if(!$("#contents").is(":visible"))
