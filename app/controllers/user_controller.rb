@@ -72,7 +72,7 @@ class UserController < ApplicationController
     salt = user_pass[0..9]
     hashed_pass = Digest::SHA1.base64digest(provided_pass + salt)
 
-    user_pass == hashed_pass
+    (salt + user_pass) == hashed_pass
   end
 
   def generate_salt
