@@ -46,7 +46,8 @@ class UserController < ApplicationController
 
         begin 
           user.save!
-          render json: { status: 200 }
+          session_id = register_session user.id
+          render json: { status: 200, session_id: session_id }
         rescue Exception => e
           logger.error "User save failed: #{user}"
           render json: { status: 500, error: "User save failed" }, status: 500
