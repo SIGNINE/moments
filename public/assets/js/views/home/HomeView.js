@@ -21,6 +21,9 @@ define([
       this.model.set({"email":$email,"password":$pw,"session_id":window.app_router.getCookie("session_id")});
         this.model.save({}, {
           success: function(model, resp){
+            alert("test");
+            alert(resp);
+            alert(resp.session_id);
             window.r = resp;
             document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
             window.location= '#circles';
