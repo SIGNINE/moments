@@ -35,6 +35,7 @@ define([
 
       var aPhotos = [photo1,photo2,photo3,photo4,photo5];
 
+      window.ap = aPhotos;
 
       var photosCollection = new AlbumsCollection();
       photosCollection.put("user_id",window.user_id);
