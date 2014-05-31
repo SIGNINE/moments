@@ -356,29 +356,12 @@ h6{
   background-color: transparent !important;
 }
 
-.flip-container {
-perspective:1000;
-}
-
-.flipper {
-transition:.6s;
-transform-style:preserve-3d;
-position:relative;
-}
-
-.front,.back {
-backface-visibility:hidden;
-position:absolute;
-top:0;
-left:0;
-}
-
-.front {
-z-index:2;
-}
-
-.flip-container:hover .flipper,.flip-container.hover .flipper,.back {
-transform:rotateY(180deg);
+.add_circle:active {
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  transform: rotate(20deg);
 }
 
 .square {
