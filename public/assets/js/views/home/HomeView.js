@@ -14,6 +14,7 @@ define([
     },
 
     register:function(e){
+      e.preventDefault();
       alert("hold");
       $(".fbg").show();
       $email = $("button#btn_register").parent().find("input:text").val();
