@@ -14,16 +14,20 @@ define([
       'click button#btn_login': 'login'
     },
 
+    initialize : function (options) {
+      this.options = options || {};
+    },
     register:function(e){
       e.preventDefault();
       $(".fbg").show();
       $email = $("button#btn_register").parent().find("input:text").val();
       $pw = $("button#btn_register").parent().find("input:password").val();
-      var user = new UserModel({ email: $email, password: $pw});
-      user.save({}, {
+      this.options.model.set({ email: $email, password: $pw});
+      this.options.model.save({}, {
         success: function(model, resp){
           window.r = resp;
           document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
+          document.cookie='user_id='+window.r.user_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
           window.location= '#circles';
           window.location.reload();
         },
@@ -40,11 +44,12 @@ define([
       $(".fbg").show();
       $email = $("button#btn_login").parent().find("input:text").val();
       $pw = $("button#btn_login").parent().find("input:password").val();
-      var user = new UserModel({ email: $email, password: $pw, type: 'login'});
-        user.save({}, {
+      this.options.model.set({ email: $email, password: $pw, type: 'login'});
+        this.options.model.save({}, {
           success: function(model, resp){
             window.r = resp;
             document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
+            document.cookie='user_id='+window.r.user_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
             window.location.reload();
           },
           error: function(resp){
