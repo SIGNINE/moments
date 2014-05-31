@@ -14,7 +14,7 @@ define([
       this._meta[prop] = value;
     },
     url: function(){
-      return '.../users/'+this.get('user_id')+'/album.json?session_id='+this.get('session_id');
+      return '.../users/'+this._meta('user_id')+'/album.json?session_id='+this._meta('session_id');
     }
 
   });
