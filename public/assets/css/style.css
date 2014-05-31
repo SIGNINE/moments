@@ -357,7 +357,12 @@ h6{
 }
 
 .add_circle:active {
-  display: none;
+  background-color: blue;
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  transform: rotate(-10deg);
 }
 
 .square {
