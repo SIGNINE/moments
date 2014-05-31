@@ -20,7 +20,7 @@ define([
       $.ajax({
         url: "/user/"+window.user_id+'/album',
         type: "POST",
-        data: "session_id="+window.session_id,
+        data: "title='testing';session_id="+window.session_id,
         success:function(result){
           alert('succes');
           window.rrr = result;
