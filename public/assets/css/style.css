@@ -357,7 +357,11 @@ h6{
 }
 
 .add_circle:hover {
-  transform: translateX(-400px);
+  -webkit-transform: slideup;
+  -moz-transform: slideup;
+  -ms-transform: slideup;
+  -o-transform: slideup;
+  transform: slideup;
 }
 
 
