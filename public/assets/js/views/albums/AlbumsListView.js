@@ -23,7 +23,7 @@ define([
       window.bleh = data;
       var compiledTemplate = _.template( albumsListTemplate, data );
       window.ct = compiledTemplate;
-      $("#photos-list").prepend( compiledTemplate ); 
+      // $("#photos-list").prepend( compiledTemplate ); 
     }
   });
   return AlbumsListView;

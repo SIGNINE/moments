@@ -40,6 +40,7 @@ define([
       photosCollection.put("user_id",window.user_id);
       photosCollection.put("session_id",window.session_id); 
       photosCollection.fetch(); 
+      
       var photosListView = new AlbumsListView({ collection: photosCollection}); 
       
       photosListView.render(); 
