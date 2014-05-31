@@ -44,7 +44,7 @@ define([
       photosCollection.put("session_id",window.session_id); 
       photosCollection.fetch(); 
       window.p = photosCollection;
-      var photosListView = new AlbumsListView({ collection: photosCollection}); 
+      var photosListView = new AlbumsListView({ collection: pc}); 
       
       photosListView.render(); 
 
