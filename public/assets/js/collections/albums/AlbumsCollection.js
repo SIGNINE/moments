@@ -14,6 +14,7 @@ define([
       this._meta[prop] = value;
     },
     parse: function(response){
+      window.rr = response;
       return response.albums;
     },
     url: function(){
