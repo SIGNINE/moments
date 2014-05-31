@@ -349,6 +349,23 @@ h6{
 
 }
 
+@-webkit-keyframes rotate {
+
+    0% {
+    -webkit-transform: rotate(0deg);
+    }
+    50% { 
+    -webkit-transform: rotate(150deg);
+    }
+    60% { 
+    -webkit-transform: rotate(150deg);
+    }
+    100% { 
+    -webkit-transform: rotate(0deg);
+    }
+
+}
+
 .add_circle {
   background-image: none !important;
   border: 3px solid #e2e2e2 !important;
@@ -357,11 +374,8 @@ h6{
 }
 
 .add_circle:hover {
-  -webkit-animation: fadeOut;
-  -moz-animation: fadeOut;
-  -ms-animation: fadeOut;
-  -o-animation: fadeOut;
-  animation: fadeOut;
+  -webkit-animation-name: rotate; 
+  -webkit-animation-duration: 1.5s; 
 }
 
 
