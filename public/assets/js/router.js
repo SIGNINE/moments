@@ -37,6 +37,7 @@ define([
     window.app_router = new AppRouter;
 
     var user = new UserModel();
+    window.user_id = window.app_router.getCookie("user_id");
 
     Backbone.history.bind("all", function (route, router) {
       window.user_id = window.app_router.getCookie("user_id");
