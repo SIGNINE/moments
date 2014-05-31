@@ -15,11 +15,11 @@ define([
       this.$el.hide();
       this.$el.html(circlesTemplate).fadeIn();
 
-      var photo1 = new CirclesModel({title:'Photo 1', url: 'http://i.imgur.com/vSRCLfM.jpg'}); 
-      var photo2 = new CirclesModel({title:'Photo 2', url: 'http://i.imgur.com/vSRCLfM.jpg'}); 
-      var photo3 = new CirclesModel({title:'Photo 3', url: 'http://i.imgur.com/vSRCLfM.jpg'}); 
-      var photo4 = new CirclesModel({title:'Photo 4', url: 'http://i.imgur.com/vSRCLfM.jpg'});
-      var photo5 = new CirclesModel({title:'Photo 5', url: 'http://i.imgur.com/vSRCLfM.jpg'});
+      var photo1 = new CirclesModel({title:'Circle 1', url: 'http://i.imgur.com/vSRCLfM.jpg'}); 
+      var photo2 = new CirclesModel({title:'Circle 2', url: 'http://i.imgur.com/vSRCLfM.jpg'}); 
+      var photo3 = new CirclesModel({title:'Circle 3', url: 'http://i.imgur.com/vSRCLfM.jpg'}); 
+      var photo4 = new CirclesModel({title:'Circle 4', url: 'http://i.imgur.com/vSRCLfM.jpg'});
+      var photo5 = new CirclesModel({title:'Circle 5', url: 'http://i.imgur.com/vSRCLfM.jpg'});
 
       var aPhotos = [photo1, 
                       photo2,
