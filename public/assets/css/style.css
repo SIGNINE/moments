@@ -357,7 +357,7 @@ h6{
 }
 
 .add_circle:hover {
-  opacity: 0;
+  display: none;
 }
 
 
