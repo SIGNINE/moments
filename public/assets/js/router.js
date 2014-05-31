@@ -5,14 +5,14 @@ define([
   'backbone',
   'models/user/UserModel',
   'views/home/HomeView',
-  'views/photos/PhotosView',
+  'views/albums/AlbumsView',
   'views/circles/CirclesView',
-], function($, _, Backbone, UserModel, HomeView, PhotosView, CirclesView) {
+], function($, _, Backbone, UserModel, HomeView, AlbumsView, CirclesView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
-      'photos': 'showPhotos',
+      'albums': 'showAlbums',
       'register': 'newUser',
       'login': 'loginUser',
       'circles': 'showCircles',
@@ -38,13 +38,13 @@ define([
 
     var user = new UserModel();
 
-    app_router.on('route:showPhotos', function(){
+    app_router.on('route:showAlbums', function(){
 
         // Call render on the module we loaded in via the dependency array
         if(!$("#contents").is(":visible"))
           $("#contents").fadeIn();
-        var photosView = new PhotosView();
-        photosView.render();
+        var albumsView = new AlbumsView();
+        albumsView.render();
 
     });
 

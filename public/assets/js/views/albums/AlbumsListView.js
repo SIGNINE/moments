@@ -4,12 +4,12 @@ define([
   'underscore',
   'backbone',
   // Pull in the Collection module from above,
-  'models/photos/PhotosModel',
-  'collections/photos/PhotosCollection',
-  'text!templates/photos/photosListTemplate.html'
+  'models/albums/AlbumsModel',
+  'collections/albums/AlbumsCollection',
+  'text!templates/albums/albumsListTemplate.html'
 
-], function($, _, Backbone, PhotosModel, PhotosCollection, photosListTemplate){
-  var PhotosListView = Backbone.View.extend({
+], function($, _, Backbone, AlbumsModel, AlbumsCollection, albumsListTemplate){
+  var AlbumsListView = Backbone.View.extend({
     el: $("#photos-list"),
 
     render: function(){
@@ -19,12 +19,12 @@ define([
         _: _ 
       };
 
-      window.blah = photosListTemplate;
+      window.blah = albumsListTemplate;
       window.bleh = data;
-      var compiledTemplate = _.template( photosListTemplate, data );
+      var compiledTemplate = _.template( albumsListTemplate, data );
       window.ct = compiledTemplate;
       $("#photos-list").prepend( compiledTemplate ); 
     }
   });
-  return PhotosListView;
+  return AlbumsListView;
 });
