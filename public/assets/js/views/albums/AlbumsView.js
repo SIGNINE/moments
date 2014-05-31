@@ -28,7 +28,14 @@ define([
                       photo4,
                       photo5];
 
+      var photosCollection1 = new AlbumsCollection();
+      photosCollection1.put("user_id",window.user_id);
+      photosCollection1.put("session_id",window.session_id); 
+      photosCollection1.fetch(); 
+      window.p = photosCollection1;
+
       var photosCollection = new AlbumsCollection(aPhotos);  
+      window.aa = photosCollection;
       var photosListView = new AlbumsListView({ collection: photosCollection}); 
       
       photosListView.render(); 
