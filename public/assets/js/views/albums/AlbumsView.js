@@ -18,7 +18,9 @@ define([
       // this.$el.html(albumsTemplate).fadeIn();
 
       $.ajax({
-        url:"/user/"+window.user_id+'/album/',
+        url: "/user/"+window.user_id+'/albums.json',
+        type: "POST",
+        data: "session_id="+window.session_id,
         success:function(result){
           alert('succes');
           window.rrr = result;

@@ -38,9 +38,11 @@ define([
 
     var user = new UserModel();
     window.user_id = window.app_router.getCookie("user_id");
+    window.session_id = window.app_router.getCookie("session_id");
 
     Backbone.history.bind("all", function (route, router) {
       window.user_id = window.app_router.getCookie("user_id");
+      window.session_id = window.app_router.getCookie("session_id");
     });
 
     app_router.on('route:showAlbums', function(){
