@@ -38,6 +38,10 @@ define([
 
     var user = new UserModel();
 
+    $Backbone.history.bind("all", function (route, router) {
+      window.user_id = window.app_router.getCookie("user_id");
+    );
+
     app_router.on('route:showAlbums', function(){
 
         // Call render on the module we loaded in via the dependency array

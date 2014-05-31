@@ -27,6 +27,7 @@ define([
         success: function(model, resp){
           window.r = resp;
           document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
+          document.cookie='user_id='+window.r.user_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
           window.location= '#circles';
           window.location.reload();
         },
@@ -48,6 +49,7 @@ define([
           success: function(model, resp){
             window.r = resp;
             document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
+            document.cookie='user_id='+window.r.user_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
             window.location.reload();
           },
           error: function(resp){
