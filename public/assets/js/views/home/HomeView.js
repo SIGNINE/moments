@@ -20,15 +20,11 @@ define([
       $email = $("button#btn_register").parent().find("input:text").val();
       $pw = $("button#btn_register").parent().find("input:password").val();
       var user = new UserModel({ email: $email, password: $pw});
-      user.save({"email":$email,"password":$pw}, {
+      user.save({}, {
         success: function(model, resp){
-          alert("test");
-          alert(resp);
-          alert(resp.session_id);
-          window.r = resp;
           document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
-          //window.location= '#circles';
-          //window.location.reload();
+          window.location= '#circles';
+          window.location.reload();
         },
         error: function(model, resp){
           alert("hi");
@@ -48,13 +44,12 @@ define([
       $(".fbg").show();
       $email = $("button#btn_login").parent().find("input:text").val();
       $pw = $("button#btn_login").parent().find("input:password").val();
-      this.model.clear();
-      this.model.set({"email":$email,"password":$pw, "type":"login","session_id":window.app_router.getCookie("session_id")});
-        this.model.save({}, {
+      var user = new UserModel({ email: $email, password: $pw, type: 'type'});
+        user.save({}, {
           success: function(model, resp){
             window.r = resp;
             document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
-            //window.location.reload();
+            window.location.reload();
           },
           error: function(resp){
             $("#errormsg").html("Invalid login. Please try again.");
