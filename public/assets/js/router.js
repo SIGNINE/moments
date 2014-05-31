@@ -56,6 +56,7 @@ define([
     app_router.on('route:signOut', function(){
 
         document.cookie = "session_id=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
         app_router.navigate('', {trigger: true});
 
 
