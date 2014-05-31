@@ -356,6 +356,36 @@ h6{
   background-color: transparent !important;
 }
 
+.flip-container {
+perspective:1000;
+}
+
+.flip-container,.front,.back {
+width:320px;
+height:480px;
+}
+
+.flipper {
+transition:.6s;
+transform-style:preserve-3d;
+position:relative;
+}
+
+.front,.back {
+backface-visibility:hidden;
+position:absolute;
+top:0;
+left:0;
+}
+
+.front {
+z-index:2;
+}
+
+.flip-container:hover .flipper,.flip-container.hover .flipper,.back {
+transform:rotateY(180deg);
+}
+
 .square {
     float:left;
     position: relative;
