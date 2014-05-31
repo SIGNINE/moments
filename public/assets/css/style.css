@@ -356,15 +356,6 @@ h6{
   background-color: transparent !important;
 }
 
-.add_circle:active {
-  background-color: blue !!important;
-  -webkit-transform: rotate(-10deg) !important;
-  -moz-transform: rotate(-10deg) !important;
-  -ms-transform: rotate(-10deg) !important;
-  -o-transform: rotate(-10deg) !important;
-  transform: rotate(-10deg) !important;
-}
-
 .square {
     float:left;
     position: relative;
@@ -393,6 +384,9 @@ h6{
 
 .square:hover {
   cursor: pointer;
+}
+
+.square:not(.add_circle):hover {
   -webkit-transform: rotate(10deg);
   -moz-transform: rotate(10deg);
   -ms-transform: rotate(10deg);
