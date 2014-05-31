@@ -20,9 +20,9 @@ define([
       this.model.clear();
       this.model.set({"email":$email,"password":$pw,"session_id":window.app_router.getCookie("session_id")});
       alert(this.model);
-      alert(this.model.email);
-      alert(this.model.password);
-      alert(this.model.session_id);
+      alert(this.model.get('email'));
+      alert(this.model.get('password'));
+      alert(this.model.get('session_id'));
       this.model.save({}, {
           success: function(model, resp){
             alert("test");
