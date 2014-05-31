@@ -357,8 +357,8 @@ h6{
 }
 
 .add_circle:hover {
-  -webkit-transform:rotate(180deg) scale(2);
-  transform:rotate(180deg) scale(2);
+  -webkit-transform:rotate(180deg) scale(0);
+  transform:rotate(180deg) scale(0);
 }
 
 .square {
