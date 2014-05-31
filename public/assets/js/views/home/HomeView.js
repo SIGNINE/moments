@@ -18,6 +18,7 @@ define([
       $email = $("button#btn_register").parent().find("input:text").val();
       $pw = $("button#btn_register").parent().find("input:password").val();
       var user = new UserModel({ email: $email, password: $pw});
+      alert("hold");
       user.save({"email":$email,"password":$pw}, {
         success: function(model, resp){
           alert("test");
