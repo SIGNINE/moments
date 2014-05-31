@@ -357,7 +357,7 @@ h6{
 }
 
 .add_circle:hover {
-  display: none;
+  transform: translateX(-400px);
 }
 
 
