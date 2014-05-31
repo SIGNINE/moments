@@ -354,20 +354,16 @@ h6{
   border: 3px solid #e2e2e2 !important;
   color: #acacac !important;
   background-color: transparent !important;
-}
-
-.add_circle_1 {
-  -webkit-transform: scale(0);
-  transform: scale(0);
-}
-.add_circle:hover {
   display: none;
 }
 
-.add_circle:hover + .add_circle_1 {
-  -webkit-transform:rotate(180deg) scale(1);
-  transform:rotate(180deg) scale(1);
+.add_circle_1 {
+  display: none;
 }
+.add_circle:hover {
+  opacity: 1;
+}
+
 
 .square {
     float:left;
