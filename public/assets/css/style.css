@@ -357,15 +357,8 @@ h6{
 }
 
 .add_circle:hover {
-  -webkit-transform:rotate(180deg);
-  transform:rotate(180deg);
-  
-}
-
-.add_circle.table-cell:hover {
-  position: absolute;
-  -webkit-transform:rotate(-180deg);
-  transform:rotate(-180deg);
+  -webkit-transform:rotate(180deg) opacity .25s;
+  transform:rotate(180deg) opacity .25s;
 }
 
 .square {
