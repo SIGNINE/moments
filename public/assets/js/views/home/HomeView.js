@@ -19,27 +19,19 @@ define([
       $pw = $("button#btn_register").parent().find("input:password").val();
       this.model.clear();
       this.model.set({"email":$email,"password":$pw,"session_id":window.app_router.getCookie("session_id")});
-      alert(this.model);
-      alert(this.model.get('email'));
-      alert(this.model.get('password'));
-      alert(this.model.get('session_id'));
-      this.model.save({}, {
+        this.model.save({}, {
           success: function(model, resp){
-            alert("test");
-            alert(resp);
-            alert(resp.session_id);
             window.r = resp;
             document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
-            //window.location= '#circles';
-            //window.location.reload();
+            window.location= '#circles';
+            window.location.reload();
           },
           error: function(){
-            alert("hi");
             $("#errormsg").html("Registration failed. Please try again.");
             setTimeout('$(".fbg").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
             setTimeout('$(".acidjs-hellobar").slideToggle();', 7000);
           }
-      });
+        });
     },
 
     login:function(e){
@@ -52,7 +44,7 @@ define([
           success: function(model, resp){
             window.r = resp;
             document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
-            //window.location.reload();
+            window.location.reload();
           },
           error: function(resp){
             $("#errormsg").html("Invalid login. Please try again.");
