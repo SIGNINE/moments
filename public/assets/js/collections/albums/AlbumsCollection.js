@@ -7,7 +7,7 @@ define([
   var AlbumsCollection = Backbone.Collection.extend({
     model: AlbumsModel,
     
-    initialize: function(){
+    initialize: function(){ 
       this._meta = {};
     },
     put: function(prop, value){
@@ -18,7 +18,7 @@ define([
       return response.albums;
     },
     url: function(){
-      return '/user/'+this._meta['user_id']+'/album.json?session_id='+this._meta['session_id'];
+      return '/user/'+this._meta['user_id']+'/album.json?';
     }
 
   });

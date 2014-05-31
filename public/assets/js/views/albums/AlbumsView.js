@@ -21,7 +21,7 @@ define([
       var aC = new AlbumsCollection();
       aC.put("user_id",window.user_id);
       aC.put("session_id",window.session_id); 
-      aC.fetch(); 
+      aC.fetch({data: {session_id: window.session_id}, type: 'GET'}); 
       window.ac = aC;
       
       var albumListView = new AlbumsListView({ collection: aC}); 
