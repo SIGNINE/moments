@@ -355,13 +355,10 @@ h6{
     -webkit-transform: rotate(0deg);
     }
     50% { 
-    -webkit-transform: rotate(150deg);
-    }
-    60% { 
-    -webkit-transform: rotate(150deg);
+    -webkit-transform: rotate(150deg) scale(0);
     }
     100% { 
-    -webkit-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) scale(1);
     }
 
 }
