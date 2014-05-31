@@ -18,12 +18,12 @@ define([
       this.$el.hide();
       this.$el.html(albumsTemplate).fadeIn();
 
-      var AlbumsCollection = new AlbumsCollection();
-      AlbumsCollection.put("user_id",window.user_id);
-      AlbumsCollection.put("session_id",window.session_id); 
-      AlbumsCollection.fetch(); 
+      var aC = new AlbumsCollection();
+      aC.put("user_id",window.user_id);
+      aC.put("session_id",window.session_id); 
+      aC.fetch(); 
 
-      var albumListView = new AlbumsListView({ collection: AlbumsCollection}); 
+      var albumListView = new AlbumsListView({ collection: aC}); 
       
       albumListView.render(); 
 
