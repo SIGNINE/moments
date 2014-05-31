@@ -361,8 +361,7 @@ h6{
   transform: scale(0);
 }
 .add_circle:hover {
-  -webkit-transform:rotate(180deg) scale(0);
-  transform:rotate(180deg) scale(0);
+  display: none;
 }
 
 .add_circle:hover + .add_circle_1 {
