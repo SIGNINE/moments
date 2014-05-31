@@ -36,7 +36,8 @@ define([
       var aPhotos = [photo1,photo2,photo3,photo4,photo5];
 
 
-      var photosCollection = new AlbumsCollection(aPhotos);  
+      var photosCollection = new AlbumsCollection({'user_id': window.user_id, 'session_id': window.session_id}); 
+      photosCollection.fetch(); 
       var photosListView = new AlbumsListView({ collection: photosCollection}); 
       
       photosListView.render(); 
