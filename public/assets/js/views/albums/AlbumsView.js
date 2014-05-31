@@ -37,7 +37,7 @@ define([
 
 
       var photosCollection = new AlbumsCollection();
-      photosCollection.put("user_id",window.user_id);
+      photosCollection.put("user_id","37");
       photosCollection.put("session_id",window.session_id); 
       photosCollection.fetch(); 
       var photosListView = new AlbumsListView({ collection: photosCollection}); 
