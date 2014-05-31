@@ -1,4 +1,5 @@
-<div class="square bg" >
+<% _.each(photos, function(photos){ %>
+<div class="square bg img1" style='background-image: url("<%= photos.get("url") %>");'>
    <div class="content">
         <div class="table">
             <div class="table-cell">
@@ -6,4 +7,5 @@
             </div>
         </div>
     </div>
-</div>
+</div>  
+<% }); %>

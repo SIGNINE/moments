@@ -19,7 +19,8 @@ define([
         _: _ 
       };
 
-      window.blah = this.collection.models;
+      window.blah = photosListTemplate;
+      window.bleh = data;
       var compiledTemplate = _.template( photosListTemplate, data );
       window.ct = compiledTemplate;
       $("#photos-list").html( compiledTemplate ); 
