@@ -19,7 +19,7 @@ define([
       $pw = $("button#btn_register").parent().find("input:password").val();
       this.model.clear();
       this.model.set({"email":$email,"password":$pw,"session_id":window.app_router.getCookie("session_id")});
-        this.model.save(null, {
+        this.model.save({}, {
           success: function(model, resp){
             alert("test");
             alert(resp);
