@@ -1,11 +1,5 @@
-<% _.each(photos, function(photos){ %>
-<div class="square bg img1" style='background-image: url("<%= photos.get("url") %>");'>
-   <div class="content">
-        <div class="table">
-            <div class="table-cell">
-                <%= photos.get("title") %>
-            </div>
-        </div>
-    </div>
-</div>  
-<% }); %>
+<ul>
+  <% _.each(photos, function(photos){ %>
+   <li><a href='<%= photos.get("url") %>'><%= photos.get("title") %></a></li> 
+  <% }); %>
+</ul>

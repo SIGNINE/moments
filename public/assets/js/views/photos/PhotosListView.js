@@ -8,7 +8,7 @@ define([
   'collections/photos/PhotosCollection',
   'text!templates/photos/photosListTemplate.html'
 
-], function($, _, Backbone, PhotosModel, PhotosCollection, photosListTemplate){
+], function($, _, Backbone, PHotosModel, PhotosCollection, photosListTemplate){
   var PhotosListView = Backbone.View.extend({
     el: $("#photos-list"),
 
@@ -19,10 +19,7 @@ define([
         _: _ 
       };
 
-      window.blah = photosListTemplate;
-      window.bleh = data;
       var compiledTemplate = _.template( photosListTemplate, data );
-      window.ct = compiledTemplate;
       $("#photos-list").html( compiledTemplate ); 
     }
   });
