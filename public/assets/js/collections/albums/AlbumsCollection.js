@@ -13,6 +13,9 @@ define([
     put: function(prop, value){
       this._meta[prop] = value;
     },
+    parse: function(response){
+      return response.albums;
+    },
     url: function(){
       return '/user/'+this._meta['user_id']+'/album.json?session_id='+this._meta['session_id'];
     }
