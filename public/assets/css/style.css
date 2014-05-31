@@ -360,11 +360,6 @@ h6{
 perspective:1000;
 }
 
-.flip-container,.front,.back {
-width:320px;
-height:480px;
-}
-
 .flipper {
 transition:.6s;
 transform-style:preserve-3d;
