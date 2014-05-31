@@ -18,7 +18,7 @@ define([
       return response.albums;
     },
     url: function(){
-      return '/user/'+this._meta['user_id']+'/albumz';
+      return '/user/'+this._meta['user_id']+'/album';
     }
 
   });
