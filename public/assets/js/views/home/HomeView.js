@@ -2,8 +2,9 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/home/homeTemplate.html'
-], function($, _, Backbone, homeTemplate){
+  'text!templates/home/homeTemplate.html',
+  'models/user/UserModel'
+], function($, _, Backbone, homeTemplate, UserModel){
 
   var HomeView = Backbone.View.extend({
     el: $("#container"),
@@ -15,7 +16,6 @@ define([
 
     register:function(e){
       e.preventDefault();
-      alert("hold");
       $(".fbg").show();
       $email = $("button#btn_register").parent().find("input:text").val();
       $pw = $("button#btn_register").parent().find("input:password").val();
@@ -44,6 +44,7 @@ define([
     },
 
     login:function(e){
+      e.preventDefault();
       $(".fbg").show();
       $email = $("button#btn_login").parent().find("input:text").val();
       $pw = $("button#btn_login").parent().find("input:password").val();
