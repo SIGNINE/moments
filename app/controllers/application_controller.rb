@@ -3,6 +3,40 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
 
+
+  protected
+  def not_authenticated
+    session_id = params[:session_id]
+    return if session_id == nil || session_id == ''
+
+    user_id = find_session session_id
+    return if user_id == nil
+ 
+    respond_to do |f|
+      f.json { render json: { status: 401, error: "User already logged in" }, status: 401 }
+    end
+  end
+
+  def authenticate
+    session_id = params[:session_id] 
+
+    resond_to do |f|
+      f.json { render json: { status: 401, error: "Session id missing" }, status: 401 }
+    end if session_id == nil || session_id == ''
+
+    user_id = find_session session_id
+    respond_to do |f|
+      f.json { render json: { status: 401, error: "Session id missing" }, status: 401 }
+    end if user_id == nil 
+
+    @user = User.find_by_id user_id
+  end
+
+  def find_session id
+    key = $redis.keys("user-session-*-#{id}").first
+    $redis.get(key)
+  end
+
   def validate_params params_list
     missing_params = []
     params_list.each do |p|

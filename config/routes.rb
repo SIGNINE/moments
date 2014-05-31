@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home_page#index'
   
-  resources :user
+  resources :user do
+    resources :album
+  end
   post 'user/login' => 'user#login'
 
   # Example of regular route:

@@ -16,7 +16,7 @@ class UserController < ApplicationController
 
         if password_matches? user.password, params[:password]
           session_id = register_session user.id
-          render json: { status: 200, session_id: session_id }
+          render json: { status: 200, session_id: session_id, user_id: user.id }
         else
           render json: { status: 401, error: "Wrong password" }, status: 401
         end
@@ -47,7 +47,7 @@ class UserController < ApplicationController
         begin 
           user.save!
           session_id = register_session user.id
-          render json: { status: 200, session_id: session_id }
+          render json: { status: 200, session_id: session_id, user_id: user.id }
         rescue Exception => e
           logger.error "User save failed: #{user}"
           render json: { status: 500, error: "User save failed" }, status: 500
@@ -90,10 +90,6 @@ class UserController < ApplicationController
     (1..size).map { o[rand(o.length)] }.join
   end
 
-  def find_session id
-    $redis.get("user-session-*-#{id}")
-  end
-
   def register_session user_id
     # delete all sessions linked to this user
     $redis.keys("user-session-#{user_id}-*").each { |k| $redis.del(k) }
@@ -105,17 +101,4 @@ class UserController < ApplicationController
 
     session_id
   end
-
-  def not_authenticated
-    session_id = params[:session_id]
-    return if session_id == nil || session_id == ''
-
-    user_id = find_session session_id
-    return if user_id == nil
- 
-    respond_to do |f|
-      f.json { render json: { status: 401, error: "User already logged in" }, status: 404 }
-    end
-  end
-
 end
