@@ -23,7 +23,7 @@ define([
       window.bleh = data;
       var compiledTemplate = _.template( photosListTemplate, data );
       window.ct = compiledTemplate;
-      $("#photos-list").html( compiledTemplate ); 
+      $("#photos-list").prepend( compiledTemplate ); 
     }
   });
   return PhotosListView;
