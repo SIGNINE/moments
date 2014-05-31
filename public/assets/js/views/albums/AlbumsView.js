@@ -36,7 +36,7 @@ define([
 
       var photosCollection = new AlbumsCollection(aPhotos);  
       window.aa = photosCollection;
-      var photosListView = new AlbumsListView({ collection: photosCollection}); 
+      var photosListView = new AlbumsListView({ collection: photosCollection1}); 
       
       photosListView.render(); 
 
