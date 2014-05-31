@@ -38,7 +38,7 @@ define([
 
     var user = new UserModel();
 
-    $Backbone.history.bind("all", function (route, router) {
+    Backbone.history.bind("all", function (route, router) {
       window.user_id = window.app_router.getCookie("user_id");
     });
 
