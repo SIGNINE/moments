@@ -356,9 +356,18 @@ h6{
   background-color: transparent !important;
 }
 
+.add_circle_1 {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
 .add_circle:hover {
   -webkit-transform:rotate(180deg) scale(0);
   transform:rotate(180deg) scale(0);
+}
+
+.add_circle:hover + .add_circle_1 {
+  -webkit-transform:rotate(180deg) scale(1);
+  transform:rotate(180deg) scale(1);
 }
 
 .square {
