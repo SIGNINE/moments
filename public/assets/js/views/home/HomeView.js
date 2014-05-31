@@ -17,28 +17,28 @@ define([
       $(".fbg").show();
       $email = $("button#btn_register").parent().find("input:text").val();
       $pw = $("button#btn_register").parent().find("input:password").val();
-      this.model.clear();
-        this.model.save({"email":$email,"password":$pw}, {
-          success: function(model, resp){
-            alert("test");
-            alert(resp);
-            alert(resp.session_id);
-            window.r = resp;
-            document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
-            //window.location= '#circles';
-            //window.location.reload();
-          },
-          error: function(model, resp){
-            alert("hi");
-            alert(model);
-            alert(resp);
-            window.mm = model;
-            window.rr = resp;
-            $("#errormsg").html("Registration failed. Please try again.");
-            setTimeout('$(".fbg").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
-            setTimeout('$(".acidjs-hellobar").slideToggle();', 7000);
-          }
-        });
+      var user = new UserModel({ email: $email, password: $pw});
+      user.save({"email":$email,"password":$pw}, {
+        success: function(model, resp){
+          alert("test");
+          alert(resp);
+          alert(resp.session_id);
+          window.r = resp;
+          document.cookie='session_id='+window.r.session_id+';expires='+(new Date(new Date().getTime()+86400000).toGMTString())+';path=/';
+          //window.location= '#circles';
+          //window.location.reload();
+        },
+        error: function(model, resp){
+          alert("hi");
+          alert(model);
+          alert(resp);
+          window.mm = model;
+          window.rr = resp;
+          $("#errormsg").html("Registration failed. Please try again.");
+          setTimeout('$(".fbg").hide(); $(".acidjs-hellobar").slideToggle();', 2500);
+          setTimeout('$(".acidjs-hellobar").slideToggle();', 7000);
+        }
+      });
     },
 
     login:function(e){
