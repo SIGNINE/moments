@@ -73,7 +73,7 @@ define([
 
     app_router.on('route:loginUser', function(){
    
-        var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk', type: 'login'});
+        var user = new UserModel({ first_name: 'naeem', last_name: 'talukdar', email: 'nt', password: 'lk'});
         user.save({}, {
           success: function(model, resp){
             alert("wel done!");
