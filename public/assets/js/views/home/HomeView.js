@@ -44,7 +44,7 @@ define([
       $(".fbg").show();
       $email = $("button#btn_login").parent().find("input:text").val();
       $pw = $("button#btn_login").parent().find("input:password").val();
-      var user = new UserModel({ email: $email, password: $pw, type: 'type'});
+      var user = new UserModel({ email: $email, password: $pw, type: 'login'});
         user.save({}, {
           success: function(model, resp){
             window.r = resp;
