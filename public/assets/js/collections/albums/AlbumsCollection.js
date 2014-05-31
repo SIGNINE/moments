@@ -8,11 +8,11 @@ define([
     model: AlbumsModel,
     
     initialize: function(){
-
-      //this.add([project0, project1, project2, project3, project4]);
-
+      this._meta = {};
     },
-
+    put: function(prop, value){
+      this._meta[prop] = value;
+    },
     url: function(){
       return '.../users/'+this.get('user_id')+'/album.json?session_id='+this.get('session_id');
     }
