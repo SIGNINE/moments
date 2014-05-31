@@ -16,11 +16,11 @@ define([
       this.$el.hide();
       this.$el.html(photosTemplate).fadeIn();
 
-      var photo1 = new PhotosModel({title:'Photo 1', url: 'http://i.imgur.com/ODT5hTG.png?1'}); 
-      var photo2 = new PhotosModel({title:'Photo 2', url: 'http://i.imgur.com/ODT5hTG.png?1'}); 
-      var photo3 = new PhotosModel({title:'Photo 3', url: 'http://i.imgur.com/ODT5hTG.png?1'}); 
-      var photo4 = new PhotosModel({title:'Photo 4', url: 'http://i.imgur.com/ODT5hTG.png?1'});
-      var photo5 = new PhotosModel({title:'Photo 5', url: 'http://i.imgur.com/ODT5hTG.png?1'});
+      var photo1 = new PhotosModel({title:'Photo 1', url: 'http://i.imgur.com/vSRCLfM.jpg'}); 
+      var photo2 = new PhotosModel({title:'Photo 2', url: 'http://i.imgur.com/vSRCLfM.jpg'}); 
+      var photo3 = new PhotosModel({title:'Photo 3', url: 'http://i.imgur.com/vSRCLfM.jpg'}); 
+      var photo4 = new PhotosModel({title:'Photo 4', url: 'http://i.imgur.com/vSRCLfM.jpg'});
+      var photo5 = new PhotosModel({title:'Photo 5', url: 'http://i.imgur.com/vSRCLfM.jpg'});
 
       var aPhotos = [photo1, 
                       photo2,
