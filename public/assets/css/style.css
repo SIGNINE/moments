@@ -378,7 +378,14 @@ h6{
 .two {
   display: none !important;
   opacity:0;
-  transition:opacity 1s linear;*
+  transition-property:opacity;
+  transition-duration:1s;
+  transition-delay:1s;
+
+  /* Safari */
+  -webkit-transition-property:opacity; 
+  -webkit-transition-duration:1s;
+  -webkit-transition-delay:1s;
 }
 
 .add_circle:hover .one {
@@ -387,7 +394,7 @@ h6{
 
 .add_circle:hover .two {
   display: table-cell !important;
-
+  opacity: 1;
 }
 
 .square {
