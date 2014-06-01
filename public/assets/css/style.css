@@ -370,7 +370,6 @@ h6{
 
 .add_circle {
   background-image: none !important;
-  border: 3px solid #e2e2e2 !important;
   color: #acacac !important;
   background-color: transparent !important;
 }
@@ -413,14 +412,13 @@ h6{
 }
 
 .square {
-    float:left;
-    position: relative;
-    width: 30%;
-    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
-    margin:1%;
-    background-color:#1E1E1E;
-    overflow:hidden;
-    border: 3px solid #e2e2e2;
+  float:left;
+  position: relative;
+  width: 30%;
+  padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+  margin:1%;
+  background-color:#1E1E1E;
+  overflow:hidden;
   -webkit-transition: all 0.7s ease;
   -moz-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
@@ -440,6 +438,10 @@ h6{
 
 .square:hover, .content:hover{
   cursor: pointer;
+}
+
+.square:not(.add_circle){
+  border: 3px solid #e2e2e2;
 }
 
 .square:not(.add_circle):hover {
