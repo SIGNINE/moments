@@ -374,10 +374,9 @@ h6{
   border: 3px solid #e2e2e2 !important;
   color: #acacac !important;
   background-color: transparent !important;
-
 }
 
-.add_circle:hover {
+.add_circle:hover, .table:hover {
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 2s; 
 }
@@ -387,13 +386,9 @@ h6{
 }
 
 .add_circle:hover .one {
-  cursor: crosshair;
   display: none;
 }
 
-.table:hover {
-  cursor: crosshair;
-}
 
 .add_circle:hover .two {
   display: table-cell !important;
