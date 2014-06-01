@@ -424,9 +424,6 @@ h6{
   transform: scale(1.1,1.1);
 }
 
-.square:hover, .square div:hover{
-  cursor: pointer;
-}
 
 .square:not(.add_circle):hover {
   -webkit-transform: rotate(10deg);
