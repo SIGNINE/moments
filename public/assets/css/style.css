@@ -384,6 +384,10 @@ h6{
   display: none !important;
 }
 
+.two input {
+  width: 80%;
+}
+
 .add_circle:hover .one {
   display: none;
 }
