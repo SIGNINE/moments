@@ -16,7 +16,7 @@ define([
       }
     },
   	urlRoot: function(){
-  		return '/user/' + this.user_id + '/circles';
+  		return '/user/' + this.user_id + '/circle';
   	}
 
 
