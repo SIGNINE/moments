@@ -370,12 +370,12 @@ h6{
   background-color: transparent !important;
 }
 
-.add_circle:hover {
+.add_circle:hover > div:hover {
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 2s; 
 }
 
-.add_circle:hover * {
+.add_circle:hover span {
   display: none;
 }
 
