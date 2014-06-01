@@ -59,9 +59,8 @@ define([
       var aC = new AlbumsCollection();
       aC.put("user_id",window.user_id);
       aC.put("session_id",window.session_id); 
-      aC.fetch({data: {session_id: window.session_id}, type: 'GET', success: function(results){alert('hi'); window.ac = aC;}}); 
-      window.ac = aC;
-      console.log(aC);
+      aC.fetch({data: {session_id: window.session_id}, type: 'GET', success: function(results){alert('hi'); window.ac = aC; console.log(aC); console.log(results);}}); 
+
       var albumListView = new AlbumsListView({ collection: photosCollection}); 
       
       albumListView.render(); 
