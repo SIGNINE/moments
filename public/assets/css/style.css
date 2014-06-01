@@ -368,17 +368,17 @@ h6{
   5% { opacity: 1; }
 }
 
-.add_square {
+.add_circle {
   background-image: none !important;
   color: white !important;
   background-color: #4DBCE9 !important;
 }
 
-.add_square.table {
+.add_circle.table {
   background-color: #4DBCE9 !important;
 }
 
-.add_square div:hover {
+.add_circle div:hover {
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 1s; 
   background-color: white !important;
@@ -404,7 +404,7 @@ h6{
   letter-spacing: 2px;
 }
 
-.add_square a:hover {
+.add_circle a:hover {
   text-decoration: none;
   -webkit-transform: scale(3,3);
   -moz-transform: scale(3,3);
@@ -413,12 +413,12 @@ h6{
   transform: scale(3,3);
 }
 
-.add_square:hover .one {
+.add_circle:hover .one {
   display: none;
 }
 
 
-.add_square:hover .two {
+.add_circle:hover .two {
   display: table-cell !important;
   -webkit-animation-name: fade; 
   -webkit-animation-duration: 40s; 
