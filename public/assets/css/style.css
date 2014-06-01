@@ -380,7 +380,7 @@ h6{
 }
 
 .add_circle:hover .two {
-  display: '';
+  display: inline;
 }
 
 .add_circle:hover span {
