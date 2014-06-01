@@ -9,7 +9,10 @@ define([
       this.user_id = options.user_id;
   	},
     parse: function(response){
-      return response;
+      if(response.type =="update")
+        return response.album;
+      else
+        return response;
     },
   	urlRoot: function(){
   		return '/user/' + this.user_id + '/album';
