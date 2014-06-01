@@ -363,6 +363,12 @@ h6{
 
 }
 
+@-webkit-keyframes fade {
+  0%   { opacity: 0; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
 .add_circle {
   background-image: none !important;
   border: 3px solid #e2e2e2 !important;
@@ -396,7 +402,8 @@ h6{
 
 .add_circle:hover .two {
   display: table-cell !important;
-  opacity: 0.2;
+  -webkit-animation-name: fade; 
+  -webkit-animation-duration: 2s; 
 }
 
 .square {
