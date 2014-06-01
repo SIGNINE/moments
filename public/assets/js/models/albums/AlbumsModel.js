@@ -10,7 +10,7 @@ define([
   	},
 
   	urlRoot: function(){
-  		return '.../user/' + this.user_id + '/album';
+  		return '/user/' + this.user_id + '/album';
   	}
 
   });
