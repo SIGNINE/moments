@@ -17,10 +17,8 @@ define([
       'keyup .new_album': 'keyNewAlbum'
     },
     keyNewAlbum: function(){
-      keyPressEventHandler : function(event){
-          if(event.keyCode == 13){
-              $(".new_album").blur();
-          }
+      if(event.keyCode == 13){
+          $(".new_album").blur();
       }
     },
     createNewAlbum: function(){
