@@ -387,10 +387,6 @@ h6{
   display: none;
 }
 
-.add_circle:hover:before {
-  content: "hi";
-}
-
 .square {
     float:left;
     position: relative;
