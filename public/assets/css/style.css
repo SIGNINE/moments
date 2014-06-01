@@ -374,7 +374,7 @@ h6{
   background-color: #4DBCE9;
 }
 
-.add_circle div {
+.add_circle div:hover {
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 2s; 
   background-color: white !important;
