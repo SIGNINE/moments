@@ -34,7 +34,9 @@ define([
             if(resp.status == 200)
               window.View.render();
             else
-              setTimeout('$(".acidjs-hellobar").slideToggle();', 7000);
+              $(".acidjs-hellobar").slideDown();
+              $("#container").css('margin-top', '30px');
+              setTimeout('$(".acidjs-hellobar").slideUp(); $("#container").css("margin-top", "0px");', 3000);
           },
           error: function(model, resp){
             if(resp.status == 200)
