@@ -10,6 +10,24 @@ define([
 
   var AlbumsView = Backbone.View.extend({
     el: $("#page"),
+
+    events: {
+      'click #submit_album': 'sendAlbum'
+    },
+
+    sendAlbum : function (e){
+      var album = new AlbumsModel({user_id: window.user_id});
+      $title = $("submit_album").parent().find("input:text").val();
+      album.set({session_id: window.session_id, title: $title});
+      album.save({}, {
+        success: function(model, resp){
+          alert('added');
+        },
+        error: function(model, resp){
+          alert('failed')
+        }
+      });
+    },
     render: function(){
 
       //This stuff is required for some reason
@@ -29,7 +47,8 @@ define([
       albumListView.render(); 
 
 
-    }
+    },
+
   });
 
   return AlbumsView;

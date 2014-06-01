@@ -6,11 +6,11 @@ define([
   var AlbumsModel = Backbone.Model.extend({
 
   	initialize: function(options){
-
+      this.user_id = options.user_id;
   	},
 
   	urlRoot: function(){
-  		return '.../user/' + this.get('user_id') + '/album/';
+  		return '.../user/' + this.user_id + '/album/';
   	}
 
   });
