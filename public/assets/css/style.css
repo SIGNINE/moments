@@ -394,7 +394,7 @@ h6{
 
 .add_circle:hover .two {
   display: table-cell !important;
-  opacity: 1;
+  opacity: 0.2;
 }
 
 .square {
