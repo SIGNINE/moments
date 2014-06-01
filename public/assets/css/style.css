@@ -365,7 +365,7 @@ h6{
 
 @-webkit-keyframes fade {
   0%   { opacity: 0; }
-  50%  { opacity: 0.5; }
+  0%  { opacity: 0.5; }
   100% { opacity: 1; }
 }
 
@@ -378,7 +378,6 @@ h6{
 }
 
 .add_circle:hover {
-  @include backface-visiblity(hidden);
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 2s; 
 }
@@ -386,14 +385,6 @@ h6{
 .two {
   display: none !important;
   opacity:0;
-  transition-property:opacity;
-  transition-duration:1s;
-  transition-delay:1s;
-
-  /* Safari */
-  -webkit-transition-property:opacity; 
-  -webkit-transition-duration:1s;
-  -webkit-transition-delay:1s;
 }
 
 .add_circle:hover .one {
@@ -403,7 +394,7 @@ h6{
 .add_circle:hover .two {
   display: table-cell !important;
   -webkit-animation-name: fade; 
-  -webkit-animation-duration: 2s; 
+  -webkit-animation-duration: 3s; 
 }
 
 .square {
