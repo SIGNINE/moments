@@ -365,8 +365,7 @@ h6{
 
 @-webkit-keyframes fade {
   0%   { opacity: 0; }
-  2%  { opacity: 0.5; }
-  3% { opacity: 1; }
+  5% { opacity: 1; }
 }
 
 .add_circle {
