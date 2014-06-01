@@ -368,6 +368,7 @@ h6{
   border: 3px solid #e2e2e2 !important;
   color: #acacac !important;
   background-color: transparent !important;
+
 }
 
 .add_circle:hover {
@@ -423,7 +424,7 @@ h6{
   transform: scale(1.1,1.1);
 }
 
-.square:hover {
+.square:hover, .square div:hover{
   cursor: pointer;
 }
 
