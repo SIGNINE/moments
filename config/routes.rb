@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   resources :user do
     resources :album
+    resources :circle
   end
   post 'user/login' => 'user#login'
 
