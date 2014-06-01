@@ -53,7 +53,6 @@ define([
     },
     fade : function(){
       $(".new").fadeToggle('slow');
-      $(".new_album").focus();
     },
     render: function(){
 
