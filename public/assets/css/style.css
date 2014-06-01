@@ -346,6 +346,14 @@ h6{
 
 }
 
+.new_album:hover {
+  cursor: text !important;
+}
+
+.new_album:focus {
+  border: 0px !important;
+}
+
 .circle:not(.new) {
     -webkit-transition: all 0.7s ease;
   -moz-transition: all 0.7s ease;
