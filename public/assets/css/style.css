@@ -378,7 +378,7 @@ h6{
 .add_circle:hover, .table:hover {
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 2s; 
-  border-color: transparent;
+  border-size: 0px !important;
 }
 
 .two {
