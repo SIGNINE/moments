@@ -15,8 +15,7 @@ define([
       'click #submit_album': 'sendAlbum'
     },
     initialize: function(){
-      console.log("Initializing...");
-      window.acc = this;
+      window.View = this;
     },
     sendAlbum : function (e){
       var album = new AlbumsModel({user_id: window.user_id});
@@ -24,13 +23,13 @@ define([
       album.save({session_id: window.session_id, title: $title}, {
         success: function(model, resp){
           if(resp.status == 200)
-            this.render();
+            window.View.render();
           else
             alert('failed');
         },
         error: function(model, resp){
           if(resp.status == 200)
-            this.render();
+            window.View.render();
           else
             alert('failed');
         }
