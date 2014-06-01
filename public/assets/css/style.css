@@ -375,8 +375,12 @@ h6{
   -webkit-animation-duration: 2s; 
 }
 
+.one {
+  width: 100%;
+}
 .two {
   -webkit-transform: scale(0);
+  width: 100%;
 }
 
 .add_circle:hover .one {
