@@ -370,7 +370,6 @@ h6{
 
 .add_circle {
   background-image: none !important;
-  border: 3px solid #e2e2e2;
   color: #acacac !important;
   background-color: transparent !important;
 }
@@ -378,7 +377,6 @@ h6{
 .add_circle:hover, .table:hover {
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 2s; 
-  border: 0px !!important;
 }
 
 .two {
