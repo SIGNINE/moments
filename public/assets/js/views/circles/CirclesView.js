@@ -25,9 +25,7 @@ define([
       }
     },
     createNewAlbum: function(){
-      if(!$(".new_album").html()){
-        $(".new_album").fadeOut('slow');
-      } else {
+      if($(".new_album").html()){
 
         var circle = new CirclesModel({user_id: window.user_id});
         $name = $(".new_album").html().split("<br>")[0];
@@ -52,7 +50,7 @@ define([
       $('.new_album').html('');
     },
     fade : function(){
-      $(".new").fadeToggle('slow');
+      $(".new").fadeIn('slow');
     },
     render: function(){
 
