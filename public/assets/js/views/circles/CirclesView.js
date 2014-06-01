@@ -11,7 +11,11 @@ define([
   var CirclesView = Backbone.View.extend({
     el: $("#page"),
     events: {
-      'click .add_circ': 'fade'
+      'click .add_circ': 'fade',
+      'click .new_album': 'newAlbum'
+    },
+    newAlbum : function() {
+      $('.new_album').html('');
     },
     fade : function(){
       $(".new").fadeIn('slow');
