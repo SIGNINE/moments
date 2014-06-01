@@ -8,8 +8,8 @@ define([
   	initialize: function(options){
       this.user_id = options.user_id;
   	},
-    parse: function(response){
-      console.log("Response is...");
+    parse: function(response, xhr){
+      console.log(response);
       console.log(response.type);
       if(response.type =="update")
         return response.album;
