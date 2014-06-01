@@ -382,6 +382,11 @@ h6{
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 1s; 
   background-color: white !important;
+  pointer-events: none;
+}
+
+.add_circle.table-cell {
+  pointer-events: none;
 }
 
 .two {
