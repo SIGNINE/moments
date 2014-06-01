@@ -370,8 +370,8 @@ h6{
 
 .add_circle {
   background-image: none !important;
-  color: #acacac !important;
-  background-color: #4DBCE9 !important;
+  color: white !important;
+  background-color: #4DBCE9;
 }
 
 .add_circle:hover, .table:hover {
