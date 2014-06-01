@@ -20,12 +20,16 @@ define([
       $title = $("#submit_album").parent().find("input:text").val();
       album.save({session_id: window.session_id, title: $title}, {
         success: function(model, resp){
-          console.log(resp);
-          alert('added');
+          if(resp.status == 200)
+            alert('success')
+          else
+            alert('failed')
         },
         error: function(model, resp){
-          console.log(resp.status);
-          alert('failed')
+          if(resp.status == 200)
+            alert('success')
+          else
+            alert('failed')
         }
       });
     },
