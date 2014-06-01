@@ -28,7 +28,7 @@ define([
       $('.new_album').html('');
     },
     fade : function(){
-      $(".new").fadeIn('slow');
+      $(".new").fadeToggle('slow');
     },
     render: function(){
 
