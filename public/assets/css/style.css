@@ -377,7 +377,7 @@ h6{
 
 }
 
-.add_circle:hover {
+.add_circle:hover, .add_circle div:hover {
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 2s; 
 }
