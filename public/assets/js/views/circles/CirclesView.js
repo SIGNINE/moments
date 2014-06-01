@@ -14,7 +14,7 @@ define([
       'click .add_circ': 'fade'
     },
     fade : function(){
-      $(".new").fadeIn();
+      $(".new").fadeIn('slow');
     },
     render: function(){
 
