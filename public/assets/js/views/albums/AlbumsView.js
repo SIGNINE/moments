@@ -14,7 +14,10 @@ define([
     events: {
       'click #submit_album': 'sendAlbum'
     },
-
+    initialize: function(){
+      console.log("Initializing...");
+      window.acc = this;
+    },
     sendAlbum : function (e){
       var album = new AlbumsModel({user_id: window.user_id});
       $title = $("#submit_album").parent().find("input:text").val();
