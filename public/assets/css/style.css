@@ -375,6 +375,13 @@ h6{
   -webkit-animation-duration: 2s; 
 }
 
+.add_circle:hover * {
+  display: none;
+}
+
+.add_circle:hover:before {
+  content: "hi";
+}
 
 .square {
     float:left;
