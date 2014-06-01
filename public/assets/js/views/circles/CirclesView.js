@@ -12,7 +12,19 @@ define([
     el: $("#page"),
     events: {
       'click .add_circ': 'fade',
-      'click .new_album': 'newAlbum'
+      'click .new_album': 'newAlbum',
+      'blur .new_album': 'createNewAlbum',
+      'keyup .new_album': 'keyNewAlbum'
+    },
+    keyNewAlbum: function(){
+      keyPressEventHandler : function(event){
+          if(event.keyCode == 13){
+              $(".new_album").blur();
+          }
+      }
+    },
+    createNewAlbum: function(){
+      alert('hi');
     },
     newAlbum : function() {
       $('.new_album').html('');
