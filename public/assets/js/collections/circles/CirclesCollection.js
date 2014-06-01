@@ -18,7 +18,7 @@ define([
       return response.circles;
     },
     url: function(){
-      return '/user/'+this._meta['user_id']+'/album';
+      return '/user/'+this._meta['user_id']+'/circlez';
     }
 
   });
