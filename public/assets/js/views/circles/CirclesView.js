@@ -34,13 +34,13 @@ define([
             if(resp.status == 200)
               window.View.render();
             else
-              alert('failed');
+              setTimeout('$(".acidjs-hellobar").slideToggle();', 7000);
           },
           error: function(model, resp){
             if(resp.status == 200)
               window.View.render();
             else
-              alert('failed');
+              setTimeout('$(".acidjs-hellobar").slideToggle();', 7000);
           }
         });
 
