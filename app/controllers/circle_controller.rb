@@ -22,6 +22,7 @@ class CircleController < ApplicationController
 
         @circle.save
       end
+    end
   end
 
 end
