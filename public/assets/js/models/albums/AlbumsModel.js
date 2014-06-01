@@ -8,8 +8,8 @@ define([
   	initialize: function(options){
       this.user_id = options.user_id;
   	},
-    parse: function(){
-
+    parse: function(response){
+      return response;
     },
   	urlRoot: function(){
   		return '/user/' + this.user_id + '/album';
