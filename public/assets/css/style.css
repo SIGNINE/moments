@@ -383,10 +383,6 @@ h6{
   display: 'block' !important;
 }
 
-.add_circle:hover span {
-  display: none;
-}
-
 .square {
     float:left;
     position: relative;
