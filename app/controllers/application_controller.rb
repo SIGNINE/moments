@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
 
     if session_id == nil || session_id == ''
       respond_to do |f|
-        if.json { render json: { status: 401, error: "Session id missing" }, status: 401 }
+        f.json { render json: { status: 401, error: "Session id missing" }, status: 401 }
       end
       return
     end
