@@ -391,6 +391,10 @@ h6{
   display: none;
 }
 
+.content:hover, .table:hover, .table-cell {
+  cursor: crosshair;
+}
+
 .add_circle:hover .two {
   display: table-cell !important;
   -webkit-animation-name: fade; 
