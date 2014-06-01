@@ -20,14 +20,20 @@ class ApplicationController < ActionController::Base
   def authenticate
     session_id = params[:session_id] 
 
-    respond_to do |f|
-      f.json { render json: { status: 401, error: "Session id missing" }, status: 401 }
-    end if session_id == nil || session_id == ''
+    if session_id == nil || session_id == ''
+      respond_to do |f|
+        if.json { render json: { status: 401, error: "Session id missing" }, status: 401 }
+      end
+      return
+    end
 
     user_id = find_session session_id
-    respond_to do |f|
-      f.json { render json: { status: 401, error: "Session id missing" }, status: 401 }
-    end if user_id == nil 
+    if user_id == nil
+      respond_to do |f|
+        f.json { render json: { status: 401, error: "Session id missing" }, status: 401 }
+      end
+      return
+    end
 
     @user = User.find_by_id user_id
   end
