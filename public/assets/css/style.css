@@ -391,7 +391,7 @@ h6{
   display: none;
 }
 
-.content:hover, .table:hover {
+.content:hover {
   cursor: crosshair;
 }
 
