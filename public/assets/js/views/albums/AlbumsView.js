@@ -18,14 +18,13 @@ define([
     sendAlbum : function (e){
       var album = new AlbumsModel({user_id: window.user_id});
       $title = $("#submit_album").parent().find("input:text").val();
-      album.set({session_id: window.session_id, title: $title});
-      album.save({}, {
+      album.save({session_id: window.session_id, title: $title}, {
         success: function(model, resp){
           console.log(resp);
           alert('added');
         },
         error: function(model, resp){
-          console.log(resp);
+          console.log(resp.status);
           alert('failed')
         }
       });
