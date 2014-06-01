@@ -11,7 +11,10 @@ define([
 
   	urlRoot: function(){
   		return '/user/' + this.user_id + '/album';
-  	}
+  	},
+    parse: function(response){
+      return response.album;
+    }
 
   });
 
