@@ -30,7 +30,7 @@ define([
       } else {
 
         var circle = new CirclesModel({user_id: window.user_id});
-        $name = $(".new_album").html();
+        $name = $(".new_album").html().split("<br>")[0];
         circle.save({session_id: window.session_id, name: $name}, {
           success: function(model, resp){
             if(resp.status == 200)
