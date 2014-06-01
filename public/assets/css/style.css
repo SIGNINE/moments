@@ -351,6 +351,7 @@ h6{
 }
 
 .new_album:focus {
+  display: none;
   border: 0px !important;
 }
 
