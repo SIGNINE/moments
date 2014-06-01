@@ -9,8 +9,8 @@ define([
       this.user_id = options.user_id;
   	},
     parse: function(response, xhr){
-      console.log(response);
-      console.log(response.type);
+      console.log(response.album);
+      console.log(response.title);
       if(response.type =="update")
         return response.album;
       else
