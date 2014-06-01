@@ -21,15 +21,15 @@ define([
       album.save({session_id: window.session_id, title: $title}, {
         success: function(model, resp){
           if(resp.status == 200)
-            this.render;
+            AlbumsView.render();
           else
-            alert('failed')
+            alert('failed');
         },
         error: function(model, resp){
           if(resp.status == 200)
-            this.render;
+            AlbumsView.render();
           else
-            alert('failed')
+            alert('failed');
         }
       });
     },
