@@ -375,9 +375,12 @@ h6{
   -webkit-animation-duration: 2s; 
 }
 
-.add_circle *:hover{
-  -webkit-animation-name: rotate; 
-  -webkit-animation-duration: 2s; 
+.add_circle:hover .one {
+  display: none;
+}
+
+.add_circle:hover .two {
+  display: '';
 }
 
 .add_circle:hover span {
