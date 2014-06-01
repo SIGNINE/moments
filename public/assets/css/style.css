@@ -371,7 +371,8 @@ h6{
 
 }
 
-.add_circle:hover {
+.add_circle:hover 
+  @include backface-visiblity(hidden);{
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 2s; 
 }
@@ -483,16 +484,6 @@ li{
     color:#fff;
 }
 
-.img1{
-    background-image: url('https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg');
-}
-
-.img2{
-    background-image: url('https://farm7.staticflickr.com/6217/6216951796_e50778255c.jpg');
-}
-.img3{
-    background-image: url('https://farm4.staticflickr.com/3794/13893055574_3df0ab636b.jpg');
-}
 
 /*  following just for the demo */
 
