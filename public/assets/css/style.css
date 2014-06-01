@@ -371,7 +371,7 @@ h6{
 .add_circle {
   background-image: none !important;
   color: white !important;
-  background-color: #4DBCE9;
+  background-color: #4DBCE9 !important;
 }
 
 .add_circle.table {
