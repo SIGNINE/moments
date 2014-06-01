@@ -17,11 +17,12 @@ define([
 
       var circlesCollection = new CirclesCollection();
       circlesCollection.put("user_id",window.user_id);
-      circlesCollection.fetch({data: {session_id: window.session_id}, type: 'GET'}); 
+      circlesCollection.fetch({data: {session_id: window.session_id}, type: 'GET', success: function(){
+        var circlesListView = new CirclesListView({ collection: circlesCollection}); 
+        circlesListView.render(); 
+      }}); 
 
-      var circlesListView = new CirclesListView({ collection: circlesCollection}); 
-      
-      circlesListView.render(); 
+
 
 
     }
