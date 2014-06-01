@@ -375,20 +375,16 @@ h6{
   -webkit-animation-duration: 2s; 
 }
 
-.one {
-  width: 100%;
-}
 .two {
-  -webkit-transform: scale(0);
-  width: 100%;
+  display: none;
 }
 
 .add_circle:hover .one {
-  -webkit-transform: scale(0);
+  display: none;
 }
 
 .add_circle:hover .two {
-  -webkit-transform: scale(1);
+  display: block;
 }
 
 .square {
