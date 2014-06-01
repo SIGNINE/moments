@@ -342,11 +342,15 @@ h6{
     background-color:#4DBCE9;
     overflow:hidden;
     border-radius: 50%;
-  -webkit-transition: all 0.7s ease;
+
+
+}
+
+.circle:not(.new) {
+    -webkit-transition: all 0.7s ease;
   -moz-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
   transition: all 0.7s ease;
-
 }
 
 @-webkit-keyframes rotate {
@@ -438,7 +442,7 @@ h6{
   
 }
 
-.circle:hover {
+.circle:hover:not(.new) {
   background-image: none !important;
   cursor: pointer;
   -webkit-transform: scale(1.1,1.1);
