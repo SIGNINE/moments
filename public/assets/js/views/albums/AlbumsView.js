@@ -21,9 +21,11 @@ define([
       album.set({session_id: window.session_id, title: $title});
       album.save({}, {
         success: function(model, resp){
+          window.rrrr = resp;
           alert('added');
         },
         error: function(model, resp){
+          window.rrrr = resp;
           alert('failed')
         }
       });
