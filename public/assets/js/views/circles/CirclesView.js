@@ -16,13 +16,37 @@ define([
       'blur .new_album': 'createNewAlbum',
       'keyup .new_album': 'keyNewAlbum'
     },
+    initialize: function(){
+      window.View = this;
+    },
     keyNewAlbum: function(){
       if(event.keyCode == 13){
           $(".new_album").blur();
       }
     },
     createNewAlbum: function(){
-      alert('hi');
+      if(!$(".new_album").html()){
+        $(".new_album").fadeOut('slow');
+      } else {
+
+        var circle = new CirclesModel({user_id: window.user_id});
+        $name = $(".new_album").html();
+        circle.save({session_id: window.session_id, name: $name}, {
+          success: function(model, resp){
+            if(resp.status == 200)
+              window.View.render();
+            else
+              alert('failed');
+          },
+          error: function(model, resp){
+            if(resp.status == 200)
+              window.View.render();
+            else
+              alert('failed');
+          }
+        });
+
+      }
     },
     newAlbum : function() {
       $('.new_album').html('');
