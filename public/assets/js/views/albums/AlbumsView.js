@@ -18,7 +18,7 @@ define([
     sendAlbum : function (e){
       var album = new AlbumsModel({user_id: window.user_id});
       $title = $("submit_album").parent().find("input:text").val();
-      album.set({session_id: window.session_id, title: $title});
+      album.set({session_id: window.session_id, name: $title});
       album.save({}, {
         success: function(model, resp){
           alert('added');

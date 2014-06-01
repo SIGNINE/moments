@@ -7,10 +7,18 @@ define([
   var CirclesCollection = Backbone.Collection.extend({
     model: CirclesModel,
     
-    initialize: function(){
-
-      //this.add([project0, project1, project2, project3, project4]);
-
+    initialize: function(){ 
+      this._meta = {};
+    },
+    put: function(prop, value){
+      this._meta[prop] = value;
+    },
+    parse: function(response){
+      window.rr = response;
+      return response.circles;
+    },
+    url: function(){
+      return '/user/'+this._meta['user_id']+'/album';
     }
 
   });
