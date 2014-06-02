@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   end
   post 'user/login' => 'user#login'
 
+  post 'circle/:id/user' => 'circle#add_user'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

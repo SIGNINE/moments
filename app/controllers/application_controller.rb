@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
       return
     end
 
-    @user = User.find_by_id user_id
+    @user = User.find user_id
   end
 
   def find_session id
