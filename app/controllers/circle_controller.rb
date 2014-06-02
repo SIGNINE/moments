@@ -30,13 +30,13 @@ class CircleController < ApplicationController
       f.json do
         return unless validate_params [:id, :user_id]
 
-        @circle = Circle.find params[:id]
+        @circle = Circle.find_by_id params[:id]
         if @circle == nil
           render json: { status: 422, error: "Circle with id #{params[:id]} does not exit" }, status: 422 
           return
         end
 
-        @new_member = User.find params[:user_id]
+        @new_member = User.find_by_id params[:user_id]
         if @new_member == nil
           render json: { status: 422, error: "User with id #{params[:user_id]} does not exit" }, status: 422 
           return
@@ -57,5 +57,19 @@ class CircleController < ApplicationController
       end
     end
   end
+
+    def get_users
+      respond_to do |f|
+        f.json do
+          @circle = Circle.find_by_id params[:id]
+          if @circle == nil
+            render json: { status: 404, error: "Circle with id: #{params[:id]} does not exist" }, status: 422 
+            return
+          end
+
+          @users = @circle.users.map { |u| { id: u.id, first_name: u.first_name, last_name: u.last_name } }
+        end
+      end
+    end
 
 end

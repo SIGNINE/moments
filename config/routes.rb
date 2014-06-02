@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post 'user/login' => 'user#login'
 
   post 'circle/:id/user' => 'circle#add_user'
+  get 'circle/:id/user' => 'circle#get_users'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
