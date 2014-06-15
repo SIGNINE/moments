@@ -106,6 +106,10 @@ define([
         }
     });
 
+    $(".logo").hover(functino(){
+      alert('hi');
+    });
+
     function doBounce(element, times, distance, speed) {
       for(i = 0; i < times; i++) {
           var d = distance.split('px')[0]/(i+1) + 'px';
