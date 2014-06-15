@@ -12,10 +12,24 @@ define([
     el: $("#page"),
 
     events: {
-      'click #submit_album': 'sendAlbum'
+      'click #submit_album': 'sendAlbum',
+      'keypress #albumname': 'triggerEnter'
     },
     initialize: function(){
       window.View = this;
+      $('.original').hover(function(){
+        $('.add_circle').attr('background-color','white');
+        $('.original').toggleClass('add_circle');
+      });
+      $('.original').mouseout(function(){
+        $('.original').addClass('add_circle');
+      });
+    },
+    triggerEnter: function(){
+      if(event.keyCode == 13){
+        event.preventDefault();
+        $("#submit_album").click();
+      }
     },
     sendAlbum : function (e){
       var album = new AlbumsModel({user_id: window.user_id});

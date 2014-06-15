@@ -36,7 +36,50 @@
 }
 #logo {
    padding: 20px;
+   font-size: 8px;
 }
+
+@-webkit-keyframes move-y {
+    0% {
+        -webkit-transform: translateY(-400px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    35% {
+        -webkit-transform: translateY(-300px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    60% {
+        -webkit-transform: translateY(-182px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    82% {
+        -webkit-transform: translateY(-105px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    92% {
+        -webkit-transform: translateY(-60px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    95%{
+        -webkit-transform: translateY(-45px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    98% {
+        -webkit-transform: translateY(-35px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    25%,55%, 75%, 85%,94%,96%,97%,100%{
+        -webkit-transform: translateY(-30px);
+        -webkit-animation-timing-function: ease-out;
+    }
+}
+
+#menuhelp {
+     -webkit-animation: move-x 4.5s ;
+     -moz-animation: move-x 4.5s ;
+     -o-animation: move-x 4.5s ;
+}
+
 h1{
   padding: 0;
   margin: 0;
@@ -361,22 +404,6 @@ h6{
   transition: all 0.7s ease;
 }
 
-@-webkit-keyframes rotate {
-
-    0% {
-    -webkit-transform: scale(1);
-    }
-    25% { 
-    -webkit-transform: scale(0);
-    }
-    75% {
-    -webkit-transform: scale(0.5);
-    }
-    100% { 
-    -webkit-transform: scale(1);
-    }
-
-}
 
 @-webkit-keyframes fade {
   0%   { opacity: 0; }
@@ -393,11 +420,6 @@ h6{
   background-color: #4DBCE9 !important;
 }
 
-.add_circle:hover {
-  -webkit-animation-name: rotate; 
-  -webkit-animation-duration: 1s; 
-  background-color: white !important;
-}
 
 .add_circle.table-cell {
   pointer-events: none;
@@ -436,6 +458,10 @@ h6{
   display: table-cell !important;
   -webkit-animation-name: fade; 
   -webkit-animation-duration: 40s; 
+}
+
+.add_circle:hover {
+  background-color: #FFFFFF !important;
 }
 
 .square {
