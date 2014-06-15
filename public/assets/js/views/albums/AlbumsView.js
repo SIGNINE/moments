@@ -56,10 +56,10 @@ define([
     getUsers: function(e){
       if(window.circle_id){
         $.ajax({
-          'url' : '../circle/'+window.circle_id+'/user.json',
-          'type' : 'GET'
+          url : '../circle/'+window.circle_id+'/user.json',
+          type : 'GET'
           },
-          'success' : function(data) {
+          success : function(data) {
             alert(data);
             console.log(data);
           }
