@@ -4,7 +4,9 @@
    Author: 
    ========================================================================== */
 
-
+#sidebar {
+  text-align: left;
+}
 #container {
   width: 960px;
   margin: auto;
