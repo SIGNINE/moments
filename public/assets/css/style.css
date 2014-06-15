@@ -411,6 +411,10 @@ h6{
   display: table-cell !important; 
 }
 
+.add_circle:hover {
+  background-color: #FFFFFF !important;
+}
+
 .square {
   float:left;
   position: relative;
