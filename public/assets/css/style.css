@@ -102,6 +102,23 @@ h6{
 
 #userbar {
   text-align: left;
+
+}
+
+#userbar li {
+  color: #ECECEC;
+  border: 2px solid #ECECEC;
+  padding: 1%;
+}
+
+#userbar li:hover {
+  color: black;
+  border: 2px solid black;
+  -webkit-transition: all 1000ms linear;
+  -moz-transition: all 1000ms linear;
+  -o-transition: all 1000ms linear;
+  -ms-transition: all 1000ms linear;
+  transition: all 1000ms linear;
 }
 
  #page .main {
