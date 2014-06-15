@@ -366,8 +366,11 @@ h6{
     0% {
     -webkit-transform: scale(1);
     }
-    50% { 
+    25% { 
     -webkit-transform: scale(0);
+    }
+    75% {
+    -webkit-transform: scale(0.5);
     }
     100% { 
     -webkit-transform: scale(1);
