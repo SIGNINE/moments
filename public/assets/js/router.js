@@ -106,7 +106,7 @@ define([
         }
     });
 
-    $(".logo").hover(functino(){
+    $(".logo").hover(function(){
       alert('hi');
     });
 
