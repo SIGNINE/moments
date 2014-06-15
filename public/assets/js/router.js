@@ -113,6 +113,9 @@ define([
               .animate({marginTop: '+='+d},speed);
       }        
     }
+
+    doBounce($('#menuhelp'), 3, '10px', 300);   
+
     //Sliding menu script
 
     $(".acidjs-hellobar").slideUp(); //Keep acidjs slid up first
