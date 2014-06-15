@@ -49,11 +49,12 @@ define([
           }
         },
         error: function(model, resp){
-          if(resp.status == 200)
+          if(resp.status == 200){
             alert("WHAT?");
             window.View.render();
-          else
+          else{
             alert('failed');
+          }
         }
       });
     },
