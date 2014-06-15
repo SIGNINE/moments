@@ -109,22 +109,22 @@ h6{
   color: #ECECEC;
   border: 2px solid #ECECEC;
   padding: 1%;
-  -webkit-transition: all 500ms linear;
-  -moz-transition: all 500ms linear;
-  -o-transition: all 500ms linear;
-  -ms-transition: all 500ms linear;
-  transition: all 500ms linear;
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+  -o-transition: all 250ms linear;
+  -ms-transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
 #userbar i:hover {
   color: #D1E751;
   cursor: pointer;
   border: 2px solid #D1E751;
-  -webkit-transition: all 500ms linear;
-  -moz-transition: all 500ms linear;
-  -o-transition: all 500ms linear;
-  -ms-transition: all 500ms linear;
-  transition: all 500ms linear;
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+  -o-transition: all 250ms linear;
+  -ms-transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
  #page .main {
