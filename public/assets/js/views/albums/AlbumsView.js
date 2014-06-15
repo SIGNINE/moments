@@ -16,6 +16,9 @@ define([
       'keypress #albumname': 'triggerEnter'
     },
     initialize: function(){
+
+      alert(this.options.herp);
+
       window.View = this;
       $('.original').hover(function(){
         $('.add_circle').attr('background-color','white');
