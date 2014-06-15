@@ -402,11 +402,11 @@ h6{
   background-color: #4DBCE9 !important;
 }
 
-.add_circle div:hover {
+.add_circle:hover {
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 1s;
   -webkit-transform-origin:top;
-  background-color: white !important;
+  background-color: #FFFFFF !important;
 }
 
 .add_circle.table-cell {
