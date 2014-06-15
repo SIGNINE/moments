@@ -107,7 +107,9 @@ define([
     });
 
     $(".logo").hover(function(){
-      document.cookie = "new_user=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      var CookieDate = new Date;
+      CookieDate.setFullYear(CookieDate.getFullYear( ) +10);
+      document.cookie = 'new_user=to_be_deleted; expires=' + CookieDate.toGMTString( ) + ';';
       $('#menuhelp').fadeOut();
     });
 
