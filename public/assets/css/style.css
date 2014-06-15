@@ -6,7 +6,9 @@
 
 undln {
   border-bottom: 1px solid black;
+  border-spacing: 10px;
 }
+
 #container {
   width: 960px;
   margin: auto;
