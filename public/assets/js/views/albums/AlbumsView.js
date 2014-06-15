@@ -19,7 +19,7 @@ define([
       $('.original').hover(function(){
         $('.original').toggleClass('add_circle');
       });
-      $('.original').mouseout(functino(){
+      $('.original').mouseout(function(){
         $('.original').addClass('add_circle');
       });
     },
