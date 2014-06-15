@@ -395,15 +395,11 @@ h6{
 .add_circle {
   background-image: none !important;
   color: white !important;
-  background-color: #4DBCE9 !important;
+  background-color: #4DBCE9;
 }
 
 .add_circle.table {
   background-color: #4DBCE9 !important;
-}
-
-.add_circle:hover .table {
-  background-color: white !important;
 }
 
 .add_circle div:hover {
