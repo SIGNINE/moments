@@ -33,12 +33,13 @@ define([
       }
     },
     sendAlbum : function (e){
+      alert("HELLO?");
       var album = new AlbumsModel({user_id: window.user_id});
       $title = $("#submit_album").parent().find("input:text").val();
       album.save({session_id: window.session_id, title: $title}, {
         success: function(model, resp){
           if(resp.status == 200){
-            
+            // window.View.render();
             console.log(resp);
             console.log(model);
             alert(resp);
@@ -49,6 +50,7 @@ define([
         },
         error: function(model, resp){
           if(resp.status == 200)
+            alert("WHAT?");
             window.View.render();
           else
             alert('failed');
