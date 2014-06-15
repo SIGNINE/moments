@@ -104,7 +104,7 @@ class CircleController < ApplicationController
             return
           end
 
-          @circle.albums << @albums
+          @circle.albums << @album
           render json: {status: 200}
         end
       end
