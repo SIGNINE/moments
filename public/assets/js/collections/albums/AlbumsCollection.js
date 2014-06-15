@@ -18,7 +18,11 @@ define([
       return response.albums;
     },
     url: function(){
-      return '/user/'+this._meta['user_id']+'/album';
+      if(!this._meta['filter'])
+        return '/user/'+this._meta['user_id']+'/album';
+      else 
+        return '/circle/'+this._meta['circle_id']+'/album';
+      
     }
 
   });

@@ -7,8 +7,6 @@ define([
 
   	initialize: function(options){
       this.user_id = options.user_id;
-      this.filter = options.filter;
-      this.circle_id = options.circle_id;
   	},
     parse: function(response, xhr){
       if(response.album){
@@ -19,10 +17,7 @@ define([
       }
     },
   	urlRoot: function(){
-      if(this.filter == 'all')
-  		  return '/user/' + this.user_id + '/album';
-      else 
-        return '/circle/' + this.circle_id + '/album';
+  		return '/user/' + this.user_id + '/album';
   	}
 
   });
