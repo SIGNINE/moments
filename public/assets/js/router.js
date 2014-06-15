@@ -1,6 +1,7 @@
 // Filename: router.js
 define([
   'jquery',
+  'jqueryUi',
   'underscore',
   'backbone',
   'models/user/UserModel',
