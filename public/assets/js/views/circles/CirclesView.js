@@ -22,7 +22,7 @@ define([
     keyNewAlbum: function(){
       if(event.keyCode == 13){
         event.preventDefault();
-          $(".new_album").blur();
+        $(".new_album").blur();
       }
     },
     createNewAlbum: function(){
