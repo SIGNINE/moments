@@ -114,9 +114,7 @@ define([
       }        
     }
 
-    doBounce($('#menuhelp'), 3, '10px', 300);   
-
-    setInterval(doBounce($('#menuhelp'), 3, '10px', 300),2000);
+    setInterval(doBounce($('#menuhelp'), 3, '10px', 300),1000);
     //Sliding menu script
 
     $(".acidjs-hellobar").slideUp(); //Keep acidjs slid up first
