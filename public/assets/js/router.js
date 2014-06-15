@@ -12,7 +12,7 @@ define([
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
-      'albums(/:action)': 'showAlbums',
+      'albums(/)(:action)': 'showAlbums',
       'register': 'newUser',
       'login': 'loginUser',
       'circles': 'showCircles',
