@@ -75,7 +75,7 @@ class CircleController < ApplicationController
     def add_album
       respond_to do |f|
         f.json do 
-          return unless validate_params [:id, :user_id, :album_id]
+          return unless validate_params [:id, :album_id]
 
           @circle = Circle.find_by_id params[:id]
           unless @circle
