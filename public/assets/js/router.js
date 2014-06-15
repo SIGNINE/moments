@@ -46,7 +46,7 @@ define([
     });
 
     var menuToken = app_router.getCookie("new_user");
-    if(menuToken){
+    if(!menuToken){
       $('#menuhelp').fadeIn();
     }
 
