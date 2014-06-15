@@ -32,8 +32,25 @@ define([
         $("#submit_album").click();
       }
     },
-    testFunction: function(){
-      alert("HIHIHI");
+    processAlbum: function(){
+      var album = new AlbumsModel({circle_id: window.circle_id});
+      $title = $("#submit_album").parent().find("input:text").val();
+      album.save({session_id: window.session_id, album_id: window.album_id}, {
+        success: function(model, resp){
+          if(resp.status == 200){
+            window.View.render();
+          }else{
+            alert('failed');
+          }
+        },
+        error: function(model, resp){
+          if(resp.status == 200){
+            window.View.render();
+          }else{
+            alert('failed');
+          }
+        }
+      });
     },
     sendAlbum : function (e){
       var album = new AlbumsModel({user_id: window.user_id});
@@ -41,14 +58,16 @@ define([
       album.save({session_id: window.session_id, title: $title}, {
         success: function(model, resp){
           if(resp.status == 200){
-            // window.View.render();
+            window.album_id = parseInt(model.responseText.split('"id":')[1].split("}")[0].replace(/\s+/g, ''));
+            window.View.processAlbum();
           }else{
             alert('failed');
           }
         },
         error: function(model, resp){
           if(resp.status == 200){
-            window.View.testFunction();
+            window.album_id = parseInt(model.responseText.split('"id":')[1].split("}")[0].replace(/\s+/g, '')); 
+            window.View.processAlbum();
             // window.View.render();
           }else{
             alert('failed');
