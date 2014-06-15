@@ -39,8 +39,8 @@
    font-size: 8px;
 }
 
-#menuhelp p{
-  margin-top: 5px !important;
+#menuhelp {
+  height: 25px;
 }
 
 h1{
