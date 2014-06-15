@@ -74,6 +74,9 @@
     }
 }
 
+#menuhelp {
+     display: none;
+}
 
 h1{
   padding: 0;

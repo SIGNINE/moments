@@ -45,6 +45,11 @@ define([
       window.session_id = window.app_router.getCookie("session_id");
     });
 
+    var menuToken = app_router.getCookie("new_user");
+    if(menuToken){
+      $('#menuhelp').fadeIn();
+    }
+
     app_router.on('route:showAlbums', function(){
 
         // Call render on the module we loaded in via the dependency array
@@ -113,10 +118,7 @@ define([
       $('#menuhelp').fadeOut();
     });
 
-    var menuToken = app_router.getCookie("new_user");
-    if(menuToken){
-      $('#menuhelp').fadeOut();
-    }
+
 
     function doBounce(element, times, distance, speed) {
       for(i = 0; i < times; i++) {
