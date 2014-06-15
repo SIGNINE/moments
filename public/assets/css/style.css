@@ -361,36 +361,7 @@ h6{
   transition: all 0.7s ease;
 }
 
-@-webkit-keyframes rotate {
 
-    0% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    }
-    50% { 
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-    }
-    100% { 
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    }
-
-}
-
-@-webkit-keyframes fade {
-  0%   { opacity: 0; }
-  5% { opacity: 1; }
-}
 
 .add_circle {
   background-image: none !important;
@@ -402,12 +373,6 @@ h6{
   background-color: #4DBCE9 !important;
 }
 
-.add_circle:hover {
-  -webkit-animation-name: rotate; 
-  -webkit-animation-duration: 1s;
-  -webkit-transform-origin:top;
-  background-color: #FFFFFF !important;
-}
 
 .add_circle.table-cell {
   pointer-events: none;
@@ -443,9 +408,7 @@ h6{
 
 
 .add_circle:hover .two {
-  display: table-cell !important;
-  -webkit-animation-name: fade; 
-  -webkit-animation-duration: 40s; 
+  display: table-cell !important; 
 }
 
 .square {
