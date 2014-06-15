@@ -26,9 +26,7 @@ define([
       });
     },
     triggerEnter: function(){
-      alert('hi');
       if(event.keyCode == 13){
-        alert('hi');
         event.preventDefault();
         $("#submit_album").click();
       }
