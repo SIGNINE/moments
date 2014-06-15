@@ -105,13 +105,13 @@ h6{
 
 }
 
-#userbar li {
+#userbar i {
   color: #ECECEC;
   border: 2px solid #ECECEC;
   padding: 1%;
 }
 
-#userbar li:hover {
+#userbar i:hover {
   color: black;
   border: 2px solid black;
   -webkit-transition: all 1000ms linear;
