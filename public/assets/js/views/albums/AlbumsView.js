@@ -17,6 +17,7 @@ define([
     initialize: function(){
       window.View = this;
       $('.original').hover(function(){
+        $('.add_circle').attr('background-color','white');
         $('.original').toggleClass('add_circle');
       });
       $('.original').mouseout(function(){
