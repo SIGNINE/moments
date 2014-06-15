@@ -100,6 +100,10 @@ h6{
   width: 500px;
 }
 
+#userbar {
+  text-align: left;
+}
+
  #page .main {
     display: block;
     position:relative;
