@@ -58,6 +58,7 @@ define([
       album.save({session_id: window.session_id, title: $title}, {
         success: function(model, resp){
           if(resp.status == 200){
+            console.log(model);
             window.album_id = parseInt(model.responseText.split('"id":')[1].split("}")[0].replace(/\s+/g, ''));
             window.View.processAlbum();
           }else{
@@ -66,6 +67,7 @@ define([
         },
         error: function(model, resp){
           if(resp.status == 200){
+            console.log(model);
             window.album_id = parseInt(model.responseText.split('"id":')[1].split("}")[0].replace(/\s+/g, '')); 
             window.View.processAlbum();
             // window.View.render();
