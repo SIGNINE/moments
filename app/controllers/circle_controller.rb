@@ -125,7 +125,7 @@ class CircleController < ApplicationController
             return
           end
 
-          @albums = @circle.albums.map { |a| {"id": a.id, "title": a.title} }
+          @albums = @circle.albums.map { |a| {"id" => a.id, "title" => a.title} }
         end
       end
     end
