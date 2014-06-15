@@ -17,6 +17,7 @@ define([
     },
     initialize: function(){
       window.circle_id = this.options.circle_id;
+      this.getUsers();
       window.View = this;
       $('.original').hover(function(){
         $('.add_circle').attr('background-color','white');
@@ -51,6 +52,19 @@ define([
           }
         }
       });
+    },
+    getUsers: function(e){
+      if(window.circle_id){
+        $.ajax({
+          'url' : '../circle/'+window.circle_id+'/user.json',
+          'type' : 'GET'
+          },
+          'success' : function(data) {
+            alert(data);
+            console.log(data);
+          }
+        });
+      }
     },
     sendAlbum : function (e){
       var album = new AlbumsModel({user_id: window.user_id});
