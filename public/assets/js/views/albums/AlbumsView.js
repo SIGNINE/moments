@@ -16,7 +16,7 @@ define([
       'keypress #albumname': 'triggerEnter'
     },
     initialize: function(){
-
+      window.circle_id = this.options.circle_id;
       window.View = this;
       $('.original').hover(function(){
         $('.add_circle').attr('background-color','white');
@@ -33,7 +33,7 @@ define([
       }
     },
     sendAlbum : function (e){
-      var album = new AlbumsModel({user_id: window.user_id});
+      var album = new AlbumsModel({circle_id: window.circle_id});
       $title = $("#submit_album").parent().find("input:text").val();
       album.save({session_id: window.session_id, title: $title}, {
         success: function(model, resp){
