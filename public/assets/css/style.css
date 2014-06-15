@@ -6,6 +6,7 @@
 
 #sidebar {
   text-align: left;
+  margin-left: 20px;
 }
 #container {
   width: 960px;
