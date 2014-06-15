@@ -51,7 +51,9 @@ define([
         error: function(model, resp){
           if(resp.status == 200){
             alert("WHAT?");
-            window.View.render();
+            console.log(resp);
+            console.log(model);
+            // window.View.render();
           }else{
             alert('failed');
           }
