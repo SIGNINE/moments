@@ -118,10 +118,10 @@ h6{
 
 #userbar .fa-plus {
   color: white !important;
-  background-color: #ECECEC;
+  background-color: #D1E751;
 }
 
-#userbar i:hover {
+#userbar i:hover:not(.fa-plus){
   color: #D1E751;
   cursor: pointer;
   border: 2px solid #D1E751;
