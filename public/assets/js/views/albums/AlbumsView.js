@@ -37,14 +37,15 @@ define([
       $title = $("#submit_album").parent().find("input:text").val();
       album.save({session_id: window.session_id, title: $title}, {
         success: function(model, resp){
-          if(resp.status == 200)
+          if(resp.status == 200){
             window.View.render();
             console.log(resp);
             console.log(model);
             alert(resp);
             alert(model);
-          else
+          }else{
             alert('failed');
+          }
         },
         error: function(model, resp){
           if(resp.status == 200)
