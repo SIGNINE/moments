@@ -35,7 +35,7 @@ define([
     processAlbum: function(){
       var album = new AlbumsModel({circle_id: window.circle_id});
       $title = $("#submit_album").parent().find("input:text").val();
-      album.save({session_id: window.session_id, album_id: window.album_id}, {
+      album.save({session_id: window.session_id, user_id: window.user_id, album_id: window.album_id}, {
         success: function(model, resp){
           if(resp.status == 200){
             window.View.render();
