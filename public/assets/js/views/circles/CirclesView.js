@@ -14,13 +14,14 @@ define([
       'click .add_circ': 'fade',
       'click .new_album': 'newAlbum',
       'blur .new_album': 'createNewAlbum',
-      'keyup .new_album': 'keyNewAlbum'
+      'keypress .new_album': 'keyNewAlbum'
     },
     initialize: function(){
       window.View = this;
     },
     keyNewAlbum: function(){
       if(event.keyCode == 13){
+        event.preventDefault();
           $(".new_album").blur();
       }
     },
