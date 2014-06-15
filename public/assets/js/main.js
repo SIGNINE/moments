@@ -9,7 +9,7 @@ require.config({
     underscore: 'libs/underscore/underscore-min',
     backbone: 'libs/backbone/backbone-min',
     templates: '../templates',
-    jqueryUi: 'http://code.jquery.com/ui/1.10.4/jquery-ui.js'
+    jqueryUi: 'http://code.jquery.com/ui/1.10.4/jquery-ui'
   }
 
 });
