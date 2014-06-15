@@ -402,6 +402,10 @@ h6{
   background-color: #4DBCE9 !important;
 }
 
+.add_circle:hover .table {
+  background-color: white !important;
+}
+
 .add_circle div:hover {
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 1s;
