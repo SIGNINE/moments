@@ -56,8 +56,14 @@ define([
         // Call render on the module we loaded in via the dependency array
         if(!$("#contents").is(":visible"))
           $("#contents").fadeIn();
-        var albumsView = new AlbumsView({herp:action});
-        albumsView.render();
+        if(action){
+          var circle_id = action;
+          var albumsView = new AlbumsView({circle_id:action});
+          albumsView.render();
+        } else {
+          var albumsView = new AlbumsView({herp:action});
+          albumsView.render();
+        }
 
     });
 

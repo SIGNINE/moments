@@ -17,8 +17,6 @@ define([
     },
     initialize: function(){
 
-      alert(this.options.herp);
-
       window.View = this;
       $('.original').hover(function(){
         $('.add_circle').attr('background-color','white');
@@ -62,6 +60,10 @@ define([
 
       var aC = new AlbumsCollection();
       aC.put("user_id",window.user_id);
+      if(this.options.circle_id){
+        ac.put("filter","all");
+        ac.put("circle_id",circle_id);
+      }
       aC.fetch({data: {session_id: window.session_id}, type: 'GET', success: function(results){
 
         var albumListView = new AlbumsListView({ collection: aC}); 
