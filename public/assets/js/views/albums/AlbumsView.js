@@ -40,14 +40,14 @@ define([
           if(resp.status == 200){
             window.View.render();
           }else{
-            alert('failed');
+            alert('failed yo');
           }
         },
         error: function(model, resp){
           if(resp.status == 200){
             window.View.render();
           }else{
-            alert('failed');
+            alert('failed yo');
           }
         }
       });
