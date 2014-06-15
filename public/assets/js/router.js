@@ -12,7 +12,7 @@ define([
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
-      'albums': 'showAlbums',
+      'albums(/:action)': 'showAlbums',
       'register': 'newUser',
       'login': 'loginUser',
       'circles': 'showCircles',
@@ -50,12 +50,12 @@ define([
       $('#menuhelp').fadeIn();
     }
 
-    app_router.on('route:showAlbums', function(){
+    app_router.on('route:showAlbums', function(action){
 
         // Call render on the module we loaded in via the dependency array
         if(!$("#contents").is(":visible"))
           $("#contents").fadeIn();
-        var albumsView = new AlbumsView({herp:'derp'});
+        var albumsView = new AlbumsView({herp:action});
         albumsView.render();
 
     });
