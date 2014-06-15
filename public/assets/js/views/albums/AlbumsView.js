@@ -62,7 +62,7 @@ define([
       aC.put("user_id",window.user_id);
       if(this.options.circle_id){
         aC.put("filter","all");
-        aC.put("circle_id",circle_id);
+        aC.put("circle_id",this.options.circle_id);
       }
       aC.fetch({data: {session_id: window.session_id}, type: 'GET', success: function(results){
 
