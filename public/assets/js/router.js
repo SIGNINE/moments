@@ -13,6 +13,7 @@ define([
     routes: {
       // Define some URL routes
       'albums': 'showAlbums',
+      'albums/:action': 'showAlbums',
       'register': 'newUser',
       'login': 'loginUser',
       'circles': 'showCircles',
