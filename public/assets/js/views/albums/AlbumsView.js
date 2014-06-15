@@ -16,6 +16,12 @@ define([
     },
     initialize: function(){
       window.View = this;
+      $('.original').hover(function(){
+        $('.original').toggleClass('add_circle');
+      });
+      $('.original').mouseout(functino(){
+        $('.original').addClass('add_circle');
+      });
     },
     sendAlbum : function (e){
       var album = new AlbumsModel({user_id: window.user_id});
