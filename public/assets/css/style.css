@@ -6,7 +6,12 @@
 
 undln {
   border-bottom: 1px solid black;
-  border-spacing: 10px;
+background: rgb(1, 0, 0);
+background: -moz-linear-gradient(0deg, rgb(1, 0, 0) 41%, rgb(255, 255, 255) 100%);
+background: -webkit-linear-gradient(0deg, rgb(1, 0, 0) 41%, rgb(255, 255, 255) 100%);
+background: -o-linear-gradient(0deg, rgb(1, 0, 0) 41%, rgb(255, 255, 255) 100%);
+background: -ms-linear-gradient(0deg, rgb(1, 0, 0) 41%, rgb(255, 255, 255) 100%);
+background: linear-gradient(90deg, rgb(1, 0, 0) 41%, rgb(255, 255, 255) 100%);
 }
 
 #container {
