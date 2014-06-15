@@ -9,10 +9,16 @@ Rails.application.routes.draw do
     resources :album
     resources :circle
   end
+
+  # Users
   post 'user/login' => 'user#login'
 
+  # Circles
   post 'circle/:id/user' => 'circle#add_user'
   get 'circle/:id/user' => 'circle#get_users'
+  
+  post 'circle/:id/album' => 'circle#add_album'
+  get 'circle/:id/alubm' => 'circle#get_albums'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
