@@ -57,8 +57,7 @@ define([
       if(window.circle_id){
         $.ajax({
           url : '../circle/'+window.circle_id+'/user.json',
-          type : 'GET'
-          },
+          type : 'GET',
           success : function(data) {
             alert(data);
             console.log(data);
