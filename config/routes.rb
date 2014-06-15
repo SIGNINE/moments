@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'circle/:id/user' => 'circle#get_users'
   
   post 'circle/:id/album' => 'circle#add_album'
-  get 'circle/:id/alubm' => 'circle#get_albums'
+  get 'circle/:id/album' => 'circle#get_albums'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
