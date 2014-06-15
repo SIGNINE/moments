@@ -106,6 +106,13 @@ define([
         }
     });
 
+    function doBounce(element, times, distance, speed) {
+      for(i = 0; i < times; i++) {
+          var d = distance.split('px')[0]/(i+1) + 'px';
+          element.animate({marginTop: '-='+d},speed)
+              .animate({marginTop: '+='+d},speed);
+      }        
+    }
     //Sliding menu script
 
     $(".acidjs-hellobar").slideUp(); //Keep acidjs slid up first
