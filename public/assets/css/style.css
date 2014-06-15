@@ -408,7 +408,9 @@ h6{
 
 
 .add_circle:hover .two {
-  display: table-cell !important; 
+  display: table-cell !important;
+  -webkit-animation-name: fade; 
+  -webkit-animation-duration: 40s; 
 }
 
 .add_circle:hover {
