@@ -6,11 +6,6 @@
 
 undln {
   border-bottom: 1px solid black;
--webkit-border-image: -moz-linear-gradient(0deg, rgb(1, 0, 0) 41%, rgb(255, 255, 255) 100%);
--webkit-border-image: -webkit-linear-gradient(0deg, rgb(1, 0, 0) 41%, rgb(255, 255, 255) 100%);
--webkit-border-image: -o-linear-gradient(0deg, rgb(1, 0, 0) 41%, rgb(255, 255, 255) 100%);
--webkit-border-image: -ms-linear-gradient(0deg, rgb(1, 0, 0) 41%, rgb(255, 255, 255) 100%);
--webkit-border-image: linear-gradient(90deg, rgb(1, 0, 0) 41%, rgb(255, 255, 255) 100%);
 }
 
 #container {
