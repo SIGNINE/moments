@@ -39,8 +39,45 @@
    font-size: 8px;
 }
 
+@-webkit-keyframes move-y {
+    0% {
+        -webkit-transform: translateY(-400px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    35% {
+        -webkit-transform: translateY(-300px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    60% {
+        -webkit-transform: translateY(-182px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    82% {
+        -webkit-transform: translateY(-105px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    92% {
+        -webkit-transform: translateY(-60px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    95%{
+        -webkit-transform: translateY(-45px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    98% {
+        -webkit-transform: translateY(-35px);
+        -webkit-animation-timing-function: ease-in;
+    }
+    25%,55%, 75%, 85%,94%,96%,97%,100%{
+        -webkit-transform: translateY(-30px);
+        -webkit-animation-timing-function: ease-out;
+    }
+}
+
 #menuhelp {
-  height: 25px;
+     -webkit-animation: move-x 4.5s ;
+     -moz-animation: move-x 4.5s ;
+     -o-animation: move-x 4.5s ;
 }
 
 h1{
