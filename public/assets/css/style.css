@@ -392,7 +392,7 @@ h6{
 
 .add_circle:hover {
   -webkit-animation-name: rotate; 
-  -webkit-animation-duration: 3s; 
+  -webkit-animation-duration: 1s; 
   background-color: white !important;
 }
 
