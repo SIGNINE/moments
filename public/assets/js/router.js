@@ -107,8 +107,14 @@ define([
     });
 
     $(".logo").hover(function(){
-      alert('hi');
+      document.cookie = "new_user=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      $('#menuhelp').fadeOut();
     });
+
+    var menuToken = app_router.getCookie("new_user");
+    if(menuToken){
+      $('#menuhelp').fadeOut();
+    }
 
     function doBounce(element, times, distance, speed) {
       for(i = 0; i < times; i++) {
