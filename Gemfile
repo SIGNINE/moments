@@ -28,3 +28,6 @@ gem 'spring',        group: :development
 
 gem 'puma'
 gem 'redis'
+
+gem 'paperclip'
+gem 'aws-sdk'
