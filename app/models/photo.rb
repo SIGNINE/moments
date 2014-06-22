@@ -8,7 +8,7 @@ class Photo < ActiveRecord::Base
   S3_BUCKET = 'moments_photos'
 
   def upload file
-    filename = "#{user_id}_#{id}#{get_ext(file)}"
+    filename = "#{user_id}_#{id}#{Photo.get_ext(file)}"
 
     AWS::S3::S3Object.store(filename, file.read, S3_BUCKET, :access => :public_read)
     url = AWS::S3::S3Object.url_for(filename, S3_BUCKET, :authenticated => false) 
@@ -16,11 +16,11 @@ class Photo < ActiveRecord::Base
   end
 
   def self.file_valid? file
-    EXTENSIONS.include?(get_ext(file)) && file.size > 0
+    EXTENSIONS.include?(self.get_ext(file)) && file.size > 0
   end
 
   private
-  def get_ext file
+  def self.get_ext file
     ext = File.extname(file.original_filename).downcase
   end
 end

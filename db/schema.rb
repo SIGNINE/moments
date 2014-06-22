@@ -56,9 +56,8 @@ ActiveRecord::Schema.define(version: 20140518153320) do
   add_index "circles_albums", ["circles_id"], name: "index_circles_albums_on_circles_id", using: :btree
 
   create_table "circles_users", id: false, force: true do |t|
-    t.integer "id",        default: "nextval('circles_users_id_seq'::regclass)", null: false
-    t.integer "user_id"
     t.integer "circle_id"
+    t.integer "user_id"
   end
 
   create_table "photos", force: true do |t|
