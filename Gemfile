@@ -29,5 +29,8 @@ gem 'spring',        group: :development
 gem 'puma'
 gem 'redis'
 
-gem 'paperclip'
-gem 'aws-sdk'
+#gem 'paperclip'
+#gem 'aws-sdk'
+
+gem 'aws-s3', :require => 'aws/s3'
+

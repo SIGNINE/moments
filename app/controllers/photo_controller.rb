@@ -2,18 +2,19 @@ class PhotoController < ApplicationController
   before_filter :authenticate, only: [:index, :create]
 
   def create
-    @photo = @user.photos.create(photos_param)
+    return unless validate_params [:upload, :title]
 
-    if @photo.save
-      render json: { status: 200 }
-    else 
-      render json: { status: 500 }
+    file = params[:upload]
+
+    unless Photo.file_valid? file
+      render json: { status: 422, error: "Invalid file" }, status: 422
     end
+
+    @photo = @user.photos.create(title: params[:title])
+    @photo.save!
+    @photo.upload file
+
+    render json: { status: 200 }
   end
 
-  private
-
-  def photos_param
-    params.permit(:pic, :title)
-  end
 end
