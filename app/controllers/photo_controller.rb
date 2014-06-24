@@ -2,7 +2,11 @@ class PhotoController < ApplicationController
   before_filter :authenticate, only: [:index, :create]
  
   def index
-    @photos = @user.photos.map { |p| {"id" => p.id, "url" => p.url, "title" => p.title }
+    respond_to do |f|
+      f.json do
+        @photos = @user.photos.map { |p| {"id" => p.id, "url" => p.url, "title" => p.title } }
+      end
+    end
   end
 
   def create
