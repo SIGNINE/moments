@@ -1,5 +1,9 @@
 class PhotoController < ApplicationController
   before_filter :authenticate, only: [:index, :create]
+ 
+  def index
+    @photos = @user.photos.map { |p| {"id" => p.id, "url" => p.url, "title" => p.title }
+  end
 
   def create
     return unless validate_params [:upload, :title]
