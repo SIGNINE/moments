@@ -59,7 +59,7 @@ define([
           url : '../circle/'+window.circle_id+'/user.json',
           type : 'GET',
           success : function(data) {
-            alert(data);
+            // alert(data);
             console.log(data);
           }
         });
