@@ -25,6 +25,11 @@ ActiveRecord::Schema.define(version: 20140518153320) do
 
   add_index "albums", ["user_id"], name: "index_albums_on_user_id", using: :btree
 
+  create_table "albums_circles", id: false, force: true do |t|
+    t.integer "circle_id"
+    t.integer "album_id"
+  end
+
   create_table "albums_photos", id: false, force: true do |t|
     t.integer "photo_id", null: false
     t.integer "album_id", null: false
@@ -37,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140518153320) do
     t.string   "name",       limit: 100, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "circles", ["name"], name: "index_circles_on_name", using: :btree
@@ -48,6 +54,11 @@ ActiveRecord::Schema.define(version: 20140518153320) do
 
   add_index "circles_albums", ["albums_id"], name: "index_circles_albums_on_albums_id", using: :btree
   add_index "circles_albums", ["circles_id"], name: "index_circles_albums_on_circles_id", using: :btree
+
+  create_table "circles_users", id: false, force: true do |t|
+    t.integer "circle_id"
+    t.integer "user_id"
+  end
 
   create_table "photos", force: true do |t|
     t.string   "title",      null: false
@@ -72,13 +83,5 @@ ActiveRecord::Schema.define(version: 20140518153320) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["first_name"], name: "index_users_on_first_name", using: :btree
   add_index "users", ["last_name"], name: "index_users_on_last_name", using: :btree
-
-  create_table "users_circles", id: false, force: true do |t|
-    t.integer "users_id"
-    t.integer "circles_id"
-  end
-
-  add_index "users_circles", ["circles_id"], name: "index_users_circles_on_circles_id", using: :btree
-  add_index "users_circles", ["users_id"], name: "index_users_circles_on_users_id", using: :btree
 
 end
